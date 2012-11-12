@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2008 rel. 2 (http://www.altova.com) von RL (Bremen Online Services GmbH) bearbeitet -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tsl="http://uri.eu-spocs.eu/configuration/tsl" targetNamespace="http://uri.eu-spocs.eu/configuration/tsl" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TSLDetails">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TSLSourceList">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TSLSource" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="comment"/>
+			<xs:attribute name="certificateRepository"/>
+			<xs:attribute name="schemeSignatureVerification"/>
+			<xs:attribute name="schemeCertificateVerificationType"/>
+			<xs:attribute name="serviceCertificateVerificationType"/>
+			<xs:attribute name="followTSLPointer"/>
+			<xs:attribute name="forceCacheUpdate"/>
+			<xs:attribute name="TCPConnectionTimeout"/>
+			<xs:attribute name="useCRLCache"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

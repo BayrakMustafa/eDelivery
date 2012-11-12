@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+<document>
+	<properties>
+		<title>Specification</title>
+	</properties>
+	<body>
+		<section name="Specification">
+			<subsection name="Architecture Overview">
+				<p>
+					Following sections give a brief overview about the eDelivery
+					specification and open module structure.
+					As mentioned in section
+					<a href="index.html">
+						<u>Overview</u>
+					</a>
+					, messages in the domestic format and packaging
+					of the national solutions are mapped by
+					<b>Gateways</b>
+					to/from a common exchange format.
+					<br />
+					<br />
+					Following picture gives an overview of the flow of message delivery
+					from a sender in Memberstate A
+					to a recipient in Memberstate B, both using their domestic eDelivery
+					management domains (MD) allocated in their
+					national trust realms, which are connected via Gateways for cross-MD
+					communication. The bold green
+					arrows represent the normal dispatch message flow, while dotted arrows
+					represent delivery of evidences
+					generated on the dispatch message route for attestation of delivery status.
+					<a name="FlowOverview" id="FlowOverview"></a>
+					<div align="center">
+						<img src="images/FlowOverview.png" width="675" height="450"
+							style="border:2px solid black" alt="General flow overview" />
+					</div>
+					<br />
+					Gateways exchange SOAP messages using this common format in the
+					SOAP body. The generic part of the
+					Gateway implementation is provided as open module, offering an API to be
+					used by adapters to be set up
+					for each specific national solution connecting to the SPOCS eDelivery
+					Network.
+					<br />
+					For outbound messages, the generic Gateway API provides a
+					convenient interface to build up the the
+					the interoperability layer message as well as message part containers
+					<ul>
+						<li>
+							<a href="#REMDispatch">
+								<u>REM Dispatch</u>
+							</a>
+						</li>
+						<li>
+							<a href="#REMEvidence">
+								<u>REM Evidence</u>
+							</a>
+						</li>
+						<li>
+							<a href="#SAMLToken">
+								<u>SAML Token.</u>
+							</a>
+						</li>
+					</ul>
+					On the inbound side, these containers are offered Java objects to
+					the national adapter, in this case
+					with a convenience interface to access object parts and details.
+					<br />
+					<br />
+					Transparent for the national adapters, the generic Gateway part
+					performs
+					<ul>
+						<li>message format/schema validation</li>
+						<li>message and message parts signature application/validation
+						</li>
+						<li>address resolution, determination of target Gateway</li>
+						<li>generation respective processing of SOAP envelope including
+							WS-Security entries</li>
+						<li>reliable submission/reception of message on base of
+							SOAP/http-binding, WS Addressing and WS ReliableMessaging</li>
+						<li>exception issuance in case of errors / appearance of evidences
+							in case of delivery process problems</li>
+						<li>
+							handshake with SPOCS Trust List, Gateway/Gateway authentication:
+							<a href="#SPOCSTL">
+								<u>cross-solution trust establishment</u>
+							</a>
+							.
+						</li>
+					</ul>
+
+				</p>
+			</subsection>
+			<a name="REMDispatch" id="REMDispatch"></a>
+			<subsection name="Interoperability layer message structure">
+				<p>
+					Transport between Gateways is based on SOAP, using standard Web
+					Servcies bricks WS-Addressing for addressing and
+					WS-Security for message security. WS-ReliableMessaging is used in addtion to
+					ensure transport reliability.
+					According functionality is given by standard WS-Stack implementations, OSS
+					ones are widely available
+					(like
+					<a href="http://metro.java.net">
+						<u>Metro</u>
+					</a>
+					as used by the SPOCS implementation).
+					<br />
+					Below a glance of the constituents of the standard SOAP header
+					blocks, WS-ReliableMessaging headers omitted for brevity:
+					<br />
+					<div align="left">
+						<img src="images/SOAPHeader.png" width="350" height="400"
+							style="border:2px solid black" alt="SOAP Header structure" />
+					</div>
+					<br />
+					Next picture gives a schema overview of the message, as carried in
+					the SOAP body.
+					<br />
+					The detailed schema is specified in
+					<a
+						href="SpecDocuments/D3 2_Appendix3_eDelivery_Interconnect_Protocol_V2.0.pdf"
+						type="application/pdf">
+						<u>SPOCS Interconnect Protocol specification</u>
+					</a>
+					, which is based on
+					<a href="SpecDocuments/ts_1026400603v010101p.pdf" type="application/pdf">
+						<u>ETSI TS 102 640 ("REM")SOAP Binding Profile</u>
+						.
+					</a>
+
+
+					<div align="left">
+						<img src="images/REMDispatchHighlevelRedef.png" width="500"
+							height="600" />
+					</div>
+					<br />
+					A dispatch according the REM specification (schema prefix
+					"remsoap:") contains the mandatory containers
+					<dl class="cssmenu">
+						<dt>OriginalMsg</dt>
+						<dd>the unchanged original message</dd>
+						<dt>MsgMetaData</dt>
+						<dd>message meta data derived from according original message
+							items, carrying </dd>
+						<ul>
+							<ul>
+								<li>DeliveryContraints: time stamps like initial send, obsolete
+									after etc. </li>
+								<li>Originators: eAddress and optional details for initiator,
+									sender if different, reply-to</li>
+								<li>Destinations: eAddress and optional details for recipients
+									(in role "To" and "cc") </li>
+								<li>MsgIdentification: Message-Id as assigned by source MD,
+									optional referenced ones ("in rely to", other references)) </li>
+							</ul>
+						</ul>
+						<dt>ds:Signature</dt>
+						<dd>
+							signature covering the whole REMDispatch, applied by the Gateway
+							performing
+							the conversion from domestic to interoperability (REM/SOAP) format.
+							<b>Mandatory element</b>
+							in abberration to the REM specification.
+						</dd>
+					</dl>
+					Additional optional containers:
+					<dl class="cssmenu">
+						<dt>NormalizedMsg</dt>
+						<dd>
+							Besides the
+							<i>MsgMetaData</i>
+							mentioned above, the content of the original message should
+							be converted to this "normalized" xml structure, thus enabling the
+							receiving Gateway to convert to the
+							according items of the domestic message format in use on that side. This
+							container covers elements and sub-containers
+							for message-subject, -comments and keywords for payload
+							classification like e.g. related business-scenario or
+							-process-id,
+							message body text, -attachments, and a
+							<i>xs:any</i>
+							element, mainly foreseen to borrow structured xml payload in
+							user/scenario defined namespaces,
+							usable for machine processable payload.
+						</dd>
+						<dt>REMMDEvidencelist</dt>
+						<dd>
+							In general, a source Gateway generates an Evidence of
+							(un)successful submission
+							of a dispatch. In the successful case, this Evidence is appended to
+							the Dispatch in this element
+							<i>REMMDEvidenceList</i>
+							and delivered to
+							the target Gateway. It's on behalf of the national adapter on the
+							receiving side, how to deal with this Evidence, e.g. delivery to
+							the recipient, may be after conversion to a domestic Evidence
+							format in use. At least, this Evidence should be serialized and
+							saved for later access,
+							as subsequent (asynchronous) Evidences related to this Dispatch can
+							easily be build up using this
+							initial Evidence already carrying most of the details needed.
+							<br />
+							See
+							<a href="#REMEvidence">
+								<u>REM Evidence Overview</u>
+							</a>
+							for more detailed explanations.
+						</dd>
+
+					</dl>
+				</p>
+			</subsection>
+			<a name="REMEvidence" id="REMEvidence"></a>
+			<subsection name="REM Evidence overview">
+				<p>
+					An Evidence is a message carrying information on evidences raised
+					on the message route. Different
+					evidences may be raised by all entities involved in the message transport
+					and may be targeted to
+					different consumers (transport nodes and/or Senders as well as Recipients).
+					They serve as control,
+					proof or notification of the Dispatch message flow. Evidence data is
+					digitally signed and thus
+					transferable, i.e. it can be used by each party to prove authenticity of the
+					Evidence without the
+					need to involve the issuing entity. An Evidence message MAY be amended
+					by the Dispatch message the
+					Evidence is related to. According to the specification ETSI TS 102 640
+					adopted, the technical term
+					for this type of message is
+					<i>REMMDMessage</i>
+					, which contains one or more
+					<i>REMEvidence</i>
+					containers in a sequence
+					<i>REMMDEvidenceList</i>
+					.
+					<br />
+					<br />
+					High level overview about information carried in a REMEvidence:
+					<br />
+					<div align="center">
+						<img src="images/REMEvidenceDetails.png" width="380" height="400" />
+					</div>
+					<br />
+					A RemEvidence XML container should be signed digitally. Detailed
+					specification is given in section 5 of
+					<a href="SpecDocuments/ts_10264002v020201p.pdf" type="application/pdf">
+						<u>ETSI TS 102 640 ("REM") Part 2: Data requirements, Formats and
+							Signatures for REM</u>
+						.
+					</a>
+					For profiling of this specification according to the SPOCS
+					requirements see section 2 of
+					<a
+						href="SpecDocuments/D3 2_Appendix3_eDelivery_Interconnect_Protocol_V2.0.pdf"
+						type="application/pdf">
+						<u>SPOCS Interconnect Protocol specification</u>
+					</a>
+					.
+					<br />
+					<br />
+					The
+					<a href="#FlowOverview">
+						<u>graphical overview of the message flow</u>
+					</a>
+					on top of this page shows a logical view, which evidences are
+					produced by which node on
+					the message route in the different situations during dispatch
+					delivery:
+					<br />
+
+					<table>
+						<tr>
+							<th>Node</th>
+							<th>Description</th>
+							<th>(logical) Evidence Type</th>
+						</tr>
+						<tr>
+							<td>MD Sender</td>
+							<td>May produce an Evidence of rejection or acceptance and
+								submission</td>
+							<td>
+								Feature of domestic solution, out of scope for SPOCS eDelivery.
+								<br />
+								Information like initial submission time and other details
+								<br />
+								should be given to GW MS A by national adapter, to be included
+								in the Evidence produced there subsequently.
+							</td>
+						</tr>
+						<tr>
+							<td>GW MS A</td>
+							<td>Evidence of rejection or acceptance and submission to GW MS B
+							</td>
+							<td>
+								<b>SubmissionAcceptanceRejection</b>
+							</td>
+						</tr>
+						<tr>
+							<td>GW MS B</td>
+							<td>Evidence of rejection or acceptance and relay to recipients
+								MD</td>
+							<td>
+								<b>RelayAcceptanceRejection</b>
+								<br />
+								<i>
+									Only to be provided, if (non)delivery - see next row -
+									<br />
+									can only be provided in an asynchronous manner
+								</i>
+							</td>
+						</tr>
+						<tr>
+							<td>MD Recipient</td>
+							<td>Evidence of non-delivery or successful delivery to recipients
+								message box</td>
+							<td>
+								Initially generated in domestic format, to be routed to
+								<br />
+								national adpater of GW MS B to produce a
+								<br />
+								<b>DeliveryNonDeliveryToRecipient</b>
+								,
+								<br />
+								to be send back to GW MS A for delivery to the initial sender
+							</td>
+						</tr>
+						<tr>
+							<td>MD Recipient</td>
+							<td>
+								Evidence of non-retrieval or retrieval by recipient
+								<br />
+								- only if domestic solution provides this functionality!
+								<br />
+								The
+								<i>non</i>
+								case may e.g. express
+								<i>not in time</i>
+								, depending on local policy
+							</td>
+							<td>
+								Initially generated in domestic format, to be routed to
+								<br />
+								national adapter of GW MS B to produce a
+								<br />
+								<b>RetrievalNonRetrievalByRecipient</b>
+								,
+								<br />
+								to be send back to GW MS A for delivery to the initial sender
+							</td>
+						</tr>
+						<tr>
+							<td>MD Recipient</td>
+							<td>
+								Evidence of acceptance or non-acceptance by recipient
+								<br />
+								- only if domestic solution provides this functionality!
+							</td>
+							<td>
+								Initially generated in domestic format, to be routed to
+								<br />
+								national adapter of GW MS B to produce a
+								<br />
+								<b>AcceptanceRejectionByRecipient</b>
+								,
+								<br />
+								to be send back to GW MS A for delivery to the initial sender
+							</td>
+						</tr>
+					</table>
+					<i>
+						Legend:
+						<br />
+						- MD: Management Domain
+						<br />
+						- GW: Gateway
+						<br />
+						- MS A/B: Memberstate A/B
+					</i>
+				</p>
+			</subsection>
+			<a name="SAMLToken" id="SAMLToken"></a>
+			<subsection name="Usage of SAML Token for end entity authentication">
+				<p>
+					As of today, domestic eID / eDelivery solutions use different
+					mechanisms and/or token to attest authenticity of communication
+					participants.
+					In course of the last decade, token as specified by the
+					<a
+						href="http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf">
+						<u>OASIS Security Assertion Markup Language (SAML) Specification
+						</u>
+					</a>
+					have more and more be broadly recognized and accepted as a
+					standardised format and trusted way to
+					exchange such information. The
+					<a href="http://www.eid-stork.eu">
+						<u>EU LSP STORK </u>
+					</a>
+					on eID interoperability adopted this work, detailed in an own
+					profiling of SAML Token as specified
+					in section 6.3. of
+					<u>STORK D5.1.8.b - Interface Specification</u>
+					.
+					In expectation of future usage of STORK results in the whole EU,
+					SPOCS just inherited this
+					STORK SAML Token profiling.
+					<br />
+					But due to actual lack of SAML Token issuance, usage and mutual
+					recognition in the MS, these Token
+					have to be generated and validated by the Gateways (or services related
+					to Gateways).
+					Based on details to be provided by the national adapters - mainly
+					information on the subject to be
+					authenticated and the subjects authentication strongness in effect in the
+					respective national
+					infrastructure. The authentication level must be mapped to one of the four
+					predefined STORK
+					<b>Quality Authentication Assurance</b>
+					level
+					<b>(QAA)</b>
+					.The generic part of the Gateway provides
+					functionality to generate and sign a SAML Token of type "Sender Vouches"
+					(explanation see SAML specification). On the receiving side, this
+					Token
+					is validated by means of his signature; it's a matter of the national
+					adapter to transform the
+					details contained in the Token to the domestic authentication attestation
+					means/-token.
+					<br />
+					<br />
+					Details and an example for these SAML Sender Vouches Token is given
+					in
+					<a
+						href="SpecDocuments/D3 2_Appendix3_eDelivery_Interconnect_Protocol_V2.0.pdf"
+						type="application/pdf">
+						<u>section 4 of the SPOCS Interconnect Protocol specification</u>
+					</a>
+					.
+				</p>
+			</subsection>
+			<a name="SPOCSTL" id="SPOCSTL"></a>
+			<subsection name="Establishing cross-domain Trust: SPOCS Trust List">
+				<p>
+				</p>
+			</subsection>
+		</section>
+	</body>
+</document>

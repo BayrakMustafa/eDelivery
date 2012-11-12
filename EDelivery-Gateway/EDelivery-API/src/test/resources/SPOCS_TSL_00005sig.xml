@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tsl:TrustServiceStatusList xmlns:tsl="http://uri.etsi.org/02231/v2#"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:p1="http://uri.eu-spocs.eu/tsl/v1#"
+	xmlns:sie="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#"
+	xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	Id="SPOCS_TEST_TSL_00005" TSLTag="http://uri.etsi.org/02231/TSLTag"
+	xsi:schemaLocation="http://uri.etsi.org/02231/v2# http://uri.etsi.org/02231/v3.1.2/ts_102231v030102_xsd.xsd http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/# http://uri.etsi.org/02231/v3.1.2/ts_102231v030102_sie_xsd.xsd http://www.w3.org/2000/09/xmldsig# http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd http://uri.etsi.org/01903/v1.3.2# http://uri.etsi.org/01903/v1.3.2/XAdES.xsd">
+	<tsl:SchemeInformation>
+		<tsl:TSLVersionIdentifier>3</tsl:TSLVersionIdentifier>
+		<tsl:TSLSequenceNumber>00005</tsl:TSLSequenceNumber>
+		<tsl:TSLType>http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/TSLType/generic</tsl:TSLType>
+		<tsl:SchemeOperatorName>
+			<tsl:Name xml:lang="en">SPOCS</tsl:Name>
+		</tsl:SchemeOperatorName>
+		<tsl:SchemeOperatorAddress>
+			<tsl:PostalAddresses>
+				<tsl:PostalAddress xml:lang="en">
+					<tsl:StreetAddress>No reference</tsl:StreetAddress>
+					<tsl:Locality>EU</tsl:Locality>
+					<tsl:PostalCode>ABC123</tsl:PostalCode>
+					<tsl:CountryName>EU</tsl:CountryName>
+				</tsl:PostalAddress>
+			</tsl:PostalAddresses>
+			<tsl:ElectronicAddress>
+				<tsl:URI>mailto:servicedesk@bos-bremen.de</tsl:URI>
+			</tsl:ElectronicAddress>
+		</tsl:SchemeOperatorAddress>
+		<tsl:SchemeName>
+			<tsl:Name xml:lang="en">SPOCS TSL</tsl:Name>
+		</tsl:SchemeName>
+		<tsl:SchemeInformationURI>
+			<tsl:URI xml:lang="en">http://www.eu-spocs.eu</tsl:URI>
+		</tsl:SchemeInformationURI>
+		<tsl:StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TSLType/StatusDetn/passive</tsl:StatusDeterminationApproach>
+		<tsl:SchemeTypeCommunityRules>
+			<tsl:URI>http://www.eu-spocs.eu</tsl:URI>
+		</tsl:SchemeTypeCommunityRules>
+		<tsl:SchemeTerritory>EU</tsl:SchemeTerritory>
+		<tsl:PolicyOrLegalNotice>
+			<tsl:TSLLegalNotice xml:lang="en">SPOCS TEST TSL</tsl:TSLLegalNotice>
+		</tsl:PolicyOrLegalNotice>
+		<tsl:HistoricalInformationPeriod>0</tsl:HistoricalInformationPeriod>
+		<tsl:ListIssueDateTime>2011-03-01T00:00:01Z</tsl:ListIssueDateTime>
+		<tsl:NextUpdate>
+			<tsl:dateTime>2011-04-01T00:00:01Z</tsl:dateTime>
+		</tsl:NextUpdate>
+	</tsl:SchemeInformation>
+	<tsl:TrustServiceProviderList>
+		<tsl:TrustServiceProvider>
+			<tsl:TSPInformation>
+				<tsl:TSPName>
+					<tsl:Name xml:lang="en">SPOCS Reference Gateway</tsl:Name>
+				</tsl:TSPName>
+				<tsl:TSPAddress>
+					<tsl:PostalAddresses>
+						<tsl:PostalAddress xml:lang="en">
+							<tsl:StreetAddress>Am Fallturm 9</tsl:StreetAddress>
+							<tsl:Locality>Bremen</tsl:Locality>
+							<tsl:PostalCode>28359</tsl:PostalCode>
+							<tsl:CountryName>DE</tsl:CountryName>
+						</tsl:PostalAddress>
+					</tsl:PostalAddresses>
+					<tsl:ElectronicAddress>
+						<tsl:URI>mailto:servicedesk@bos-bremen.de</tsl:URI>
+					</tsl:ElectronicAddress>
+				</tsl:TSPAddress>
+				<tsl:TSPInformationURI>
+					<tsl:URI xml:lang="en">https://dev.spocs.bos-asp.eu/wiki</tsl:URI>
+				</tsl:TSPInformationURI>
+			</tsl:TSPInformation>
+			<tsl:TSPServices>
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/eDelivery/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">localhost-spocs-edelivery.eu</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEODCCAyCgAwIBAgIIBPCLzUNyy7swDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTEwMTIxMTMxMjI5WhcNMTQwMTIwMTMxMjI5
+									WjBiMRgwFgYDVQQDDA9UZXN0RW52aXJvbm1lbnQxGDAWBgNVBAsMD3Rlc3RjZXJ0aWZpY2F0ZTEf
+									MB0GA1UECgwWYnJlbWVuIG9ubGluZSBzZXJ2aWNlczELMAkGA1UEBhMCZGUwggEiMA0GCSqGSIb3
+									DQEBAQUAA4IBDwAwggEKAoIBAQCZ/YmyPys0SXQo+Br8PEVptIn9SIYSUIOz97znGm7zX1ZjIUCZ
+									cTzgRZuvm7hzUXQTUM/9Kp4IHh3h2A2tXuicy1CH0VYyn7VUsBgQ4KKsnigX9PiAUNOX/HS2udQb
+									byWpOOvY/dAH8GKBrwaGf7M8nHXsLesklMWxE0TD7qgWBEiLcNxWYcpFOBoYi4JLPPARCi2CBJps
+									d+t+vi2Wha0UORQguAxpzqSSPS3e/tIl3jnJxB0w5AodnIIbF+PW6AFrefL8Xxq95VyMxyLAGMND
+									20XQ2dP1CebrrTlP8h0uPNItViOnPFisIV8baKuO19BtgFx2UgYUgcAfCD+nKuwnAgMBAAGjge8w
+									gewwDAYDVR0TAQH/BAIwADA/BgNVHSUEODA2BggrBgEFBQcDAQYIKwYBBQUHAwIGCCsGAQUFBwME
+									BgorBgEEAYI3FAICBgorBgEEAYI3CgMMMB8GA1UdIwQYMBaAFBolJJ+87uiFjV0VZmCtsu3GVGBO
+									MA4GA1UdDwEB/wQEAwIEsDAdBgNVHQ4EFgQUlhjLu2X1E6hzSsVHHRkJpQAILy4wSwYIKwYBBQUH
+									AQEEPzA9MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5ib3MtYnJlbWVuLmRlL3B1YmxpY3dlYi9z
+									dGF0dXMvb2NzcDANBgkqhkiG9w0BAQsFAAOCAQEAjkbCBEsu4XXGtokhVSC+nvapKEE2oB3mlk4V
+									bUKeO4RX78D/5lNgicdpWab8uB4L9gf5JfUNmf4BOKd/mRw87yI4Nbw3zObpO4PECvFmdrQ7Qh+y
+									RIjnnadq/wYKmqZ5yDO5gATgpxk19T2GaSQeuiimqEoQ5iOCGgE3oNj76ui5hrJ9gjENLRCeZp7j
+									EizzNmdWpDupQ25gmncNaJ4cjUvBzCs2JPJwoUC97pDJF2VBhVhG7q2Q9QZVVQXFH69ZRERaZftw
+									suJkzPQM/fcak1DLsRtkNE/P9W+aRRBDZvoKKaXTUxmAm59C3hUGypCcJHckq4DF3lGoItp//zdY
+									PA==</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="digitalSignature">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEPTCCAyWgAwIBAgIIDbpHnQqbE0EwDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTAxMjAyMTQ0MjMyWhcNMTMxMjAxMTQ0MjMy
+									WjBnMR0wGwYDVQQDDBR3cDMuc3BvY3MuYm9zLWFzcC5ldTEYMBYGA1UECwwPdGVzdGNlcnRpZmlj
+									YXRlMR8wHQYDVQQKDBZicmVtZW4gb25saW5lIHNlcnZpY2VzMQswCQYDVQQGEwJkZTCCASIwDQYJ
+									KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKhkIzBzqrTmT94WJBAhS7CXlwoHlYUvZCbiDbKtTbhM
+									Z9C/m+hzTvVh42CdKd7E64vNBzGby0qTxnlBJYCYSbhYB9IHYWXl/oNu98V4GnOFtwLiQiA0Z70y
+									NFUUBp/Nx9x4eaN+AkX87z98urJpvaIYG8pajZjgyPTpZYnD2d1Dht3wgM7ldyHnz7UC/Sx4UfCF
+									dETVi8USzj1IRWwFd1LYhdaKri1dcDeDOm+zi8QOS6Si/aAYHAvcFz1BV17EteCA6NTs7u1gNu30
+									BwiLoy1FQwsyufBJeNhr/Cdl1xJoizojNWQVBhlaebsPZFrRyJpR8I8spkShUPbsM/GPu9kCAwEA
+									AaOB7zCB7DAMBgNVHRMBAf8EAjAAMD8GA1UdJQQ4MDYGCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYB
+									BQUHAwQGCisGAQQBgjcUAgIGCisGAQQBgjcKAwwwHwYDVR0jBBgwFoAUGiUkn7zu6IWNXRVmYK2y
+									7cZUYE4wDgYDVR0PAQH/BAQDAgSwMB0GA1UdDgQWBBRdaKLvM4rfRIwPKKOwCe6H8uZVKDBLBggr
+									BgEFBQcBAQQ/MD0wOwYIKwYBBQUHMAGGL2h0dHA6Ly9vY3NwLmJvcy1icmVtZW4uZGUvcHVibGlj
+									d2ViL3N0YXR1cy9vY3NwMA0GCSqGSIb3DQEBCwUAA4IBAQCEENkGrCsRzzjwdh9aw9guCCIHqU6Z
+									34++pVbOxQMwXG4FceOQ6CqjtmNGfghhug1GtoLjWaOaRZ7eHcSAp33gL/tvytLaBVgkWsr501ch
+									OFM45Vz6y0S7Z7mPwk91YJMiAoQabVBpL+GiAJAfuOvcwkJROnfnNA09OkP8Jdyi18LYq5rCSLqv
+									yBeInMv478+vJQ+1HDdXqNsbp10mXJnGAWJNBh05pe80xqOQkRJA35dVNdwbT9CvTasP6hAF0LMT
+									8cW/SftW5gLLR2kKFdyLriQd1ijCEo89XQ07nItn0PC5PBZEDdWC3nN6eu4ZsT58YYvNittVrLhW
+									0IBAjfN1</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="keyEncipherment">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>https://localhost:8444/MDTemplate/spocs?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSLeDeliveryExtension>
+									<p1:eDeliveryRealmName>localhost-spocs-edelivery.eu</p1:eDeliveryRealmName>
+									<p1:managedDomains><p1:managedDomain>localhost-spocs-edelivery.eu</p1:managedDomain></p1:managedDomains>
+									<p1:countryCode>DE</p1:countryCode>
+									<p1:supported_eAddressSchemas>
+										<p1:supported_eAddressSchema>RFC5322-address</p1:supported_eAddressSchema>
+									</p1:supported_eAddressSchemas>
+									<p1:supportedAuthenticationLevels>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Basic</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Enhanced</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Strong</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#AdES</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#AdES-Plus</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#QES</p1:supportedAuthLevel>
+									</p1:supportedAuthenticationLevels>
+									<p1:supportedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#DeliveryNonDeliveryToRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RetrievalNonRetrievalByRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#AcceptanceRejectionByRecipient</p1:supportedEvidence>
+									</p1:supportedEvidenceList>
+									<p1:requestedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+									</p1:requestedEvidenceList>
+								</p1:TSLeDeliveryExtension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+
+
+
+
+
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/syndicationModule/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">DE_SyndicationModule</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEODCCAyCgAwIBAgIIBPCLzUNyy7swDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTEwMTIxMTMxMjI5WhcNMTQwMTIwMTMxMjI5
+									WjBiMRgwFgYDVQQDDA9UZXN0RW52aXJvbm1lbnQxGDAWBgNVBAsMD3Rlc3RjZXJ0aWZpY2F0ZTEf
+									MB0GA1UECgwWYnJlbWVuIG9ubGluZSBzZXJ2aWNlczELMAkGA1UEBhMCZGUwggEiMA0GCSqGSIb3
+									DQEBAQUAA4IBDwAwggEKAoIBAQCZ/YmyPys0SXQo+Br8PEVptIn9SIYSUIOz97znGm7zX1ZjIUCZ
+									cTzgRZuvm7hzUXQTUM/9Kp4IHh3h2A2tXuicy1CH0VYyn7VUsBgQ4KKsnigX9PiAUNOX/HS2udQb
+									byWpOOvY/dAH8GKBrwaGf7M8nHXsLesklMWxE0TD7qgWBEiLcNxWYcpFOBoYi4JLPPARCi2CBJps
+									d+t+vi2Wha0UORQguAxpzqSSPS3e/tIl3jnJxB0w5AodnIIbF+PW6AFrefL8Xxq95VyMxyLAGMND
+									20XQ2dP1CebrrTlP8h0uPNItViOnPFisIV8baKuO19BtgFx2UgYUgcAfCD+nKuwnAgMBAAGjge8w
+									gewwDAYDVR0TAQH/BAIwADA/BgNVHSUEODA2BggrBgEFBQcDAQYIKwYBBQUHAwIGCCsGAQUFBwME
+									BgorBgEEAYI3FAICBgorBgEEAYI3CgMMMB8GA1UdIwQYMBaAFBolJJ+87uiFjV0VZmCtsu3GVGBO
+									MA4GA1UdDwEB/wQEAwIEsDAdBgNVHQ4EFgQUlhjLu2X1E6hzSsVHHRkJpQAILy4wSwYIKwYBBQUH
+									AQEEPzA9MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5ib3MtYnJlbWVuLmRlL3B1YmxpY3dlYi9z
+									dGF0dXMvb2NzcDANBgkqhkiG9w0BAQsFAAOCAQEAjkbCBEsu4XXGtokhVSC+nvapKEE2oB3mlk4V
+									bUKeO4RX78D/5lNgicdpWab8uB4L9gf5JfUNmf4BOKd/mRw87yI4Nbw3zObpO4PECvFmdrQ7Qh+y
+									RIjnnadq/wYKmqZ5yDO5gATgpxk19T2GaSQeuiimqEoQ5iOCGgE3oNj76ui5hrJ9gjENLRCeZp7j
+									EizzNmdWpDupQ25gmncNaJ4cjUvBzCs2JPJwoUC97pDJF2VBhVhG7q2Q9QZVVQXFH69ZRERaZftw
+									suJkzPQM/fcak1DLsRtkNE/P9W+aRRBDZvoKKaXTUxmAm59C3hUGypCcJHckq4DF3lGoItp//zdY
+									PA==</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="digitalSignature">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>http://localhost:8080/WP4Routing/spocsRouting?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSL_syndicationModule_Extension>
+								</p1:TSL_syndicationModule_Extension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+			</tsl:TSPServices>
+		</tsl:TrustServiceProvider>
+
+		<tsl:TrustServiceProvider>
+			<tsl:TSPInformation>
+				<tsl:TSPName>
+					<tsl:Name xml:lang="en">bremen online services</tsl:Name>
+				</tsl:TSPName>
+				<tsl:TSPAddress>
+					<tsl:PostalAddresses>
+						<tsl:PostalAddress xml:lang="en">
+							<tsl:StreetAddress>Am Fallturm 9</tsl:StreetAddress>
+							<tsl:Locality>Bremen</tsl:Locality>
+							<tsl:PostalCode>28359</tsl:PostalCode>
+							<tsl:CountryName>DE</tsl:CountryName>
+						</tsl:PostalAddress>
+					</tsl:PostalAddresses>
+					<tsl:ElectronicAddress>
+						<tsl:URI>mailto:servicedesk@bos-bremen.de</tsl:URI>
+					</tsl:ElectronicAddress>
+				</tsl:TSPAddress>
+				<tsl:TSPInformationURI>
+					<tsl:URI xml:lang="en">www.bos-bremen.de</tsl:URI>
+				</tsl:TSPInformationURI>
+			</tsl:TSPInformation>
+			<tsl:TSPServices>
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/eDelivery/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">SPOCSGateway@osci-bos-bremen.de</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEPTCCAyWgAwIBAgIIIHnbcA8KCe8wDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTAxMjAyMTQ0MTAxWhcNMTMxMjAxMTQ0MTAx
+									WjBnMR0wGwYDVQQDDBRNRCBHZXJtYW55IHNpZ25hdHVyZTEYMBYGA1UECwwPdGVzdGNlcnRpZmlj
+									YXRlMR8wHQYDVQQKDBZicmVtZW4gb25saW5lIHNlcnZpY2VzMQswCQYDVQQGEwJkZTCCASIwDQYJ
+									KoZIhvcNAQEBBQADggEPADCCAQoCggEBAOaUrgeu94mm33WAYkkPlnvpLdZm9qeBDCvfBsvCCAxb
+									HBrdkjImIGQuIBtVZTsX42BL+eXzfBows8VhJdwXVRT6rIwPtPJknZtkxF8RG4KJq3x/CjbRQx0p
+									9qcg9SwozJK0OamoOixCZYRTOi6ph3oj3w9NBCBC4Zc7s43QhPsUzJRDMNoqy2qQWWASo5CO5y8e
+									s1U/1ZISvidqt6r/AFvPuyrTiC07xA6PuFSwI8kOCH1rYmgB1uCRYBvVnUfzQGtiUjmpUyxb4tal
+									5ORUC5qxW8j3641Ty41RM6qVztoc/G8nqo8pVv8edgM/rK/XXiUje+WxrFPDZqDo4q3jKy0CAwEA
+									AaOB7zCB7DAMBgNVHRMBAf8EAjAAMD8GA1UdJQQ4MDYGCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYB
+									BQUHAwQGCisGAQQBgjcUAgIGCisGAQQBgjcKAwwwHwYDVR0jBBgwFoAUGiUkn7zu6IWNXRVmYK2y
+									7cZUYE4wDgYDVR0PAQH/BAQDAgSwMB0GA1UdDgQWBBTBhVzDn8HxC65pV0ekD7d+AtH93jBLBggr
+									BgEFBQcBAQQ/MD0wOwYIKwYBBQUHMAGGL2h0dHA6Ly9vY3NwLmJvcy1icmVtZW4uZGUvcHVibGlj
+									d2ViL3N0YXR1cy9vY3NwMA0GCSqGSIb3DQEBCwUAA4IBAQAtT9cGElVsKPP3pJFp0PDLxww7QU25
+									OKAPZoDJ62YVr7Xb5ERRXzjXKCEyvlB2m4TFm8nxW5y20EmEFaW327D1PM3c+UTMaghsBu+nOB0j
+									fE7Gt43dd8DkWqHsGwDNTvSFSWFmdsNknMXyl/Bn2wjvS0SIpPU4FGAdAcp+htLpH145kEOQ2P6O
+									M6YcAHOYUBY3Mk4vs2T9xLbPx9oaWjU9T0OldnLP4pnFdvLgwzL0jJUXIjBNULU3Uw7W9gqyP5ZZ
+									LytwFl1USvKKIxX9tsKRmEphA5Ajh6CDS5+tg8c2nxo5s/hVGljvc2oEwFdkGYjuNehx/lHIf8LB
+									GK8/qa1L</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="digitalSignature">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIDPTCCAqYCAQIwDQYJKoZIhvcNAQEEBQAwgZMxCzAJBgNVBAYTAkRFMQ8wDQYDVQQIDAZCcmVt
+									ZW4xDzANBgNVBAcMBkJyZW1lbjEPMA0GA1UECgwGYm9zIEtHMRAwDgYDVQQLDAdCZXRyaWViMRkw
+									FwYDVQQDDBBzcG9jcy5ib3MtYXNwLmV1MSQwIgYJKoZIhvcNAQkBFhViZXRyaWViQGJvcy1icmVt
+									ZW4uZGUwHhcNMTAxMTA1MTIxMTI4WhcNMTExMTA1MTIxMTI4WjCBtTELMAkGA1UEBhMCREUxDzAN
+									BgNVBAgMBkJyZW1lbjEPMA0GA1UEBwwGQnJlbWVuMS0wKwYDVQQKDCRicmVtZW4gb25saW5lIHNl
+									cnZpY2VzIEdtYkggJiBDby4gS0cxEDAOBgNVBAsMB0JldHJpZWIxHTAbBgNVBAMMFGRldi5zcG9j
+									cy5ib3MtYXNwLmV1MSQwIgYJKoZIhvcNAQkBFhViZXRyaWViQGJvcy1icmVtZW4uZGUwggEiMA0G
+									CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6MF8RYvq6hqJkjuN1EtfQ5bwy6IfFLCohi7+vfGEO
+									kqXApSymsSKvijKtZkgtHr+l5hGEve1nd72Ofulk9+wVzRFcM1604Z7oXzEoEsuYmQ2hsMZp7pzn
+									lUKOHvO+2d+ihvfBiMbpwhaNMqeESEKmG7/ph0axJ1T0cUeNK1xndR9Du/3fgtS3Iu/z8EYAwCrX
+									ogxtaGc3LuPOFH++XsxjUILAw3jSq6SlvI16JDemepEqvmGFLoz9D/GH9+XouRAODBOTPe33sI0+
+									s1itJ+RD3yJECbEFfGRE5nKDmy0HtcPSA+g7nZ6/t6cSOa65pGoQOzboVEmW8X6sbofew+uFAgMB
+									AAEwDQYJKoZIhvcNAQEEBQADgYEAD6W1yo1O5Sj7X+75jDRQ/siVF7eAj9u1qhuAu04By/CJXlY0
+									Zvw+u4HkYBkpDLfYrM0Y1GHMMf298fPN6hms/6L69xE0WPh0fbTNaTbxygALyLafLPzKMiPhql8K
+									ynxZlgvu9+La7PCjU2J+Lq53cWlKVg0XxQEd4yQG8BT7u+8=</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="keyEncipherment">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>https://mdgermany.spocs.bos-asp.eu/MDGermanyEGVP/spocs?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSLeDeliveryExtension>
+									<p1:eDeliveryRealmName>OSCI.BOS-BREMEN.DE</p1:eDeliveryRealmName>
+									<p1:managedDomains><p1:managedDomain>OSCI.BOS-BREMEN.DE</p1:managedDomain></p1:managedDomains>
+									<p1:countryCode>DE</p1:countryCode>
+									<p1:supported_eAddressSchemas>
+										<p1:supported_eAddressSchema>RFC5322-address</p1:supported_eAddressSchema>
+									</p1:supported_eAddressSchemas>
+									<p1:supportedAuthenticationLevels>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Basic</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Enhanced</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Strong</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#AdES</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#AdES-Plus</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#QES</p1:supportedAuthLevel>
+									</p1:supportedAuthenticationLevels>
+									<p1:supportedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#DeliveryNonDeliveryToRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RetrievalNonRetrievalByRecipient</p1:supportedEvidence>
+									</p1:supportedEvidenceList>
+									<p1:requestedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#DeliveryNonDeliveryToRecipient</p1:supportedEvidence>
+									</p1:requestedEvidenceList>
+								</p1:TSLeDeliveryExtension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+			</tsl:TSPServices>
+		</tsl:TrustServiceProvider>
+		<tsl:TrustServiceProvider>
+			<tsl:TSPInformation>
+				<tsl:TSPName>
+					<tsl:Name xml:lang="en">SPOCS Reference Gateway</tsl:Name>
+				</tsl:TSPName>
+				<tsl:TSPAddress>
+					<tsl:PostalAddresses>
+						<tsl:PostalAddress xml:lang="en">
+							<tsl:StreetAddress>Am Fallturm 9</tsl:StreetAddress>
+							<tsl:Locality>Bremen</tsl:Locality>
+							<tsl:PostalCode>28359</tsl:PostalCode>
+							<tsl:CountryName>DE</tsl:CountryName>
+						</tsl:PostalAddress>
+					</tsl:PostalAddresses>
+					<tsl:ElectronicAddress>
+						<tsl:URI>mailto:servicedesk@bos-bremen.de</tsl:URI>
+					</tsl:ElectronicAddress>
+				</tsl:TSPAddress>
+				<tsl:TSPInformationURI>
+					<tsl:URI xml:lang="en">https://dev.spocs.bos-asp.eu/wiki</tsl:URI>
+				</tsl:TSPInformationURI>
+			</tsl:TSPInformation>
+			<tsl:TSPServices>
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/eDelivery/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">SPOCSGateway@spocs-edelivery.eu</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEODCCAyCgAwIBAgIIBPCLzUNyy7swDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTEwMTIxMTMxMjI5WhcNMTQwMTIwMTMxMjI5
+									WjBiMRgwFgYDVQQDDA9UZXN0RW52aXJvbm1lbnQxGDAWBgNVBAsMD3Rlc3RjZXJ0aWZpY2F0ZTEf
+									MB0GA1UECgwWYnJlbWVuIG9ubGluZSBzZXJ2aWNlczELMAkGA1UEBhMCZGUwggEiMA0GCSqGSIb3
+									DQEBAQUAA4IBDwAwggEKAoIBAQCZ/YmyPys0SXQo+Br8PEVptIn9SIYSUIOz97znGm7zX1ZjIUCZ
+									cTzgRZuvm7hzUXQTUM/9Kp4IHh3h2A2tXuicy1CH0VYyn7VUsBgQ4KKsnigX9PiAUNOX/HS2udQb
+									byWpOOvY/dAH8GKBrwaGf7M8nHXsLesklMWxE0TD7qgWBEiLcNxWYcpFOBoYi4JLPPARCi2CBJps
+									d+t+vi2Wha0UORQguAxpzqSSPS3e/tIl3jnJxB0w5AodnIIbF+PW6AFrefL8Xxq95VyMxyLAGMND
+									20XQ2dP1CebrrTlP8h0uPNItViOnPFisIV8baKuO19BtgFx2UgYUgcAfCD+nKuwnAgMBAAGjge8w
+									gewwDAYDVR0TAQH/BAIwADA/BgNVHSUEODA2BggrBgEFBQcDAQYIKwYBBQUHAwIGCCsGAQUFBwME
+									BgorBgEEAYI3FAICBgorBgEEAYI3CgMMMB8GA1UdIwQYMBaAFBolJJ+87uiFjV0VZmCtsu3GVGBO
+									MA4GA1UdDwEB/wQEAwIEsDAdBgNVHQ4EFgQUlhjLu2X1E6hzSsVHHRkJpQAILy4wSwYIKwYBBQUH
+									AQEEPzA9MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5ib3MtYnJlbWVuLmRlL3B1YmxpY3dlYi9z
+									dGF0dXMvb2NzcDANBgkqhkiG9w0BAQsFAAOCAQEAjkbCBEsu4XXGtokhVSC+nvapKEE2oB3mlk4V
+									bUKeO4RX78D/5lNgicdpWab8uB4L9gf5JfUNmf4BOKd/mRw87yI4Nbw3zObpO4PECvFmdrQ7Qh+y
+									RIjnnadq/wYKmqZ5yDO5gATgpxk19T2GaSQeuiimqEoQ5iOCGgE3oNj76ui5hrJ9gjENLRCeZp7j
+									EizzNmdWpDupQ25gmncNaJ4cjUvBzCs2JPJwoUC97pDJF2VBhVhG7q2Q9QZVVQXFH69ZRERaZftw
+									suJkzPQM/fcak1DLsRtkNE/P9W+aRRBDZvoKKaXTUxmAm59C3hUGypCcJHckq4DF3lGoItp//zdY
+									PA==</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="digitalSignature">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEPTCCAyWgAwIBAgIIDbpHnQqbE0EwDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTAxMjAyMTQ0MjMyWhcNMTMxMjAxMTQ0MjMy
+									WjBnMR0wGwYDVQQDDBR3cDMuc3BvY3MuYm9zLWFzcC5ldTEYMBYGA1UECwwPdGVzdGNlcnRpZmlj
+									YXRlMR8wHQYDVQQKDBZicmVtZW4gb25saW5lIHNlcnZpY2VzMQswCQYDVQQGEwJkZTCCASIwDQYJ
+									KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKhkIzBzqrTmT94WJBAhS7CXlwoHlYUvZCbiDbKtTbhM
+									Z9C/m+hzTvVh42CdKd7E64vNBzGby0qTxnlBJYCYSbhYB9IHYWXl/oNu98V4GnOFtwLiQiA0Z70y
+									NFUUBp/Nx9x4eaN+AkX87z98urJpvaIYG8pajZjgyPTpZYnD2d1Dht3wgM7ldyHnz7UC/Sx4UfCF
+									dETVi8USzj1IRWwFd1LYhdaKri1dcDeDOm+zi8QOS6Si/aAYHAvcFz1BV17EteCA6NTs7u1gNu30
+									BwiLoy1FQwsyufBJeNhr/Cdl1xJoizojNWQVBhlaebsPZFrRyJpR8I8spkShUPbsM/GPu9kCAwEA
+									AaOB7zCB7DAMBgNVHRMBAf8EAjAAMD8GA1UdJQQ4MDYGCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYB
+									BQUHAwQGCisGAQQBgjcUAgIGCisGAQQBgjcKAwwwHwYDVR0jBBgwFoAUGiUkn7zu6IWNXRVmYK2y
+									7cZUYE4wDgYDVR0PAQH/BAQDAgSwMB0GA1UdDgQWBBRdaKLvM4rfRIwPKKOwCe6H8uZVKDBLBggr
+									BgEFBQcBAQQ/MD0wOwYIKwYBBQUHMAGGL2h0dHA6Ly9vY3NwLmJvcy1icmVtZW4uZGUvcHVibGlj
+									d2ViL3N0YXR1cy9vY3NwMA0GCSqGSIb3DQEBCwUAA4IBAQCEENkGrCsRzzjwdh9aw9guCCIHqU6Z
+									34++pVbOxQMwXG4FceOQ6CqjtmNGfghhug1GtoLjWaOaRZ7eHcSAp33gL/tvytLaBVgkWsr501ch
+									OFM45Vz6y0S7Z7mPwk91YJMiAoQabVBpL+GiAJAfuOvcwkJROnfnNA09OkP8Jdyi18LYq5rCSLqv
+									yBeInMv478+vJQ+1HDdXqNsbp10mXJnGAWJNBh05pe80xqOQkRJA35dVNdwbT9CvTasP6hAF0LMT
+									8cW/SftW5gLLR2kKFdyLriQd1ijCEo89XQ07nItn0PC5PBZEDdWC3nN6eu4ZsT58YYvNittVrLhW
+									0IBAjfN1</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="keyEncipherment">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>https://wp3.spocs.bos-asp.eu/MDTemplate/spocs?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSLeDeliveryExtension>
+									<p1:eDeliveryRealmName>SPOCS-EDELIVERYTEST.EU</p1:eDeliveryRealmName>
+									<p1:countryCode>DE</p1:countryCode>
+									<p1:supported_eAddressSchemas>
+										<p1:supported_eAddressSchema>RFC5322-address</p1:supported_eAddressSchema>
+									</p1:supported_eAddressSchemas>
+									<p1:supportedAuthenticationLevels>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Basic</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Enhanced</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Strong</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#AdES</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#AdES-Plus</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#QES</p1:supportedAuthLevel>
+									</p1:supportedAuthenticationLevels>
+									<p1:supportedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#DeliveryNonDeliveryToRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RetrievalNonRetrievalByRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#AcceptanceRejectionByRecipient</p1:supportedEvidence>
+									</p1:supportedEvidenceList>
+									<p1:requestedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+									</p1:requestedEvidenceList>
+								</p1:TSLeDeliveryExtension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+
+
+
+
+
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/syndicationModule/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">DE_SyndicationModule</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEODCCAyCgAwIBAgIIBPCLzUNyy7swDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTEwMTIxMTMxMjI5WhcNMTQwMTIwMTMxMjI5
+									WjBiMRgwFgYDVQQDDA9UZXN0RW52aXJvbm1lbnQxGDAWBgNVBAsMD3Rlc3RjZXJ0aWZpY2F0ZTEf
+									MB0GA1UECgwWYnJlbWVuIG9ubGluZSBzZXJ2aWNlczELMAkGA1UEBhMCZGUwggEiMA0GCSqGSIb3
+									DQEBAQUAA4IBDwAwggEKAoIBAQCZ/YmyPys0SXQo+Br8PEVptIn9SIYSUIOz97znGm7zX1ZjIUCZ
+									cTzgRZuvm7hzUXQTUM/9Kp4IHh3h2A2tXuicy1CH0VYyn7VUsBgQ4KKsnigX9PiAUNOX/HS2udQb
+									byWpOOvY/dAH8GKBrwaGf7M8nHXsLesklMWxE0TD7qgWBEiLcNxWYcpFOBoYi4JLPPARCi2CBJps
+									d+t+vi2Wha0UORQguAxpzqSSPS3e/tIl3jnJxB0w5AodnIIbF+PW6AFrefL8Xxq95VyMxyLAGMND
+									20XQ2dP1CebrrTlP8h0uPNItViOnPFisIV8baKuO19BtgFx2UgYUgcAfCD+nKuwnAgMBAAGjge8w
+									gewwDAYDVR0TAQH/BAIwADA/BgNVHSUEODA2BggrBgEFBQcDAQYIKwYBBQUHAwIGCCsGAQUFBwME
+									BgorBgEEAYI3FAICBgorBgEEAYI3CgMMMB8GA1UdIwQYMBaAFBolJJ+87uiFjV0VZmCtsu3GVGBO
+									MA4GA1UdDwEB/wQEAwIEsDAdBgNVHQ4EFgQUlhjLu2X1E6hzSsVHHRkJpQAILy4wSwYIKwYBBQUH
+									AQEEPzA9MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5ib3MtYnJlbWVuLmRlL3B1YmxpY3dlYi9z
+									dGF0dXMvb2NzcDANBgkqhkiG9w0BAQsFAAOCAQEAjkbCBEsu4XXGtokhVSC+nvapKEE2oB3mlk4V
+									bUKeO4RX78D/5lNgicdpWab8uB4L9gf5JfUNmf4BOKd/mRw87yI4Nbw3zObpO4PECvFmdrQ7Qh+y
+									RIjnnadq/wYKmqZ5yDO5gATgpxk19T2GaSQeuiimqEoQ5iOCGgE3oNj76ui5hrJ9gjENLRCeZp7j
+									EizzNmdWpDupQ25gmncNaJ4cjUvBzCs2JPJwoUC97pDJF2VBhVhG7q2Q9QZVVQXFH69ZRERaZftw
+									suJkzPQM/fcak1DLsRtkNE/P9W+aRRBDZvoKKaXTUxmAm59C3hUGypCcJHckq4DF3lGoItp//zdY
+									PA==</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="digitalSignature">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>http://localhost:8080/WP4Routing/spocsRouting?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSL_syndicationModule_Extension>
+								</p1:TSL_syndicationModule_Extension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</tsl:TSPServices>
+		</tsl:TrustServiceProvider>
+		<tsl:TrustServiceProvider>
+			<tsl:TSPInformation>
+				<tsl:TSPName>
+					<tsl:Name xml:lang="en">E-Government Innovation Center</tsl:Name>
+				</tsl:TSPName>
+				<tsl:TSPAddress>
+					<tsl:PostalAddresses>
+						<tsl:PostalAddress xml:lang="en">
+							<tsl:StreetAddress>Inffeldgasse 16/a</tsl:StreetAddress>
+							<tsl:Locality>Graz</tsl:Locality>
+							<tsl:PostalCode>8010</tsl:PostalCode>
+							<tsl:CountryName>AT</tsl:CountryName>
+						</tsl:PostalAddress>
+					</tsl:PostalAddresses>
+					<tsl:ElectronicAddress>
+						<tsl:URI>mailto:post@egiz.gv.at</tsl:URI>
+					</tsl:ElectronicAddress>
+				</tsl:TSPAddress>
+				<tsl:TSPInformationURI>
+					<tsl:URI xml:lang="en">www.egiz.gv.at</tsl:URI>
+				</tsl:TSPInformationURI>
+			</tsl:TSPInformation>
+			<tsl:TSPServices>
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/eDelivery/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">SPOCSGateway@zustellung.gv.at</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEPTCCAyWgAwIBAgIIU/X8/JX2fsUwDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTAxMjAyMTQ0MzA3WhcNMTMxMjAxMTQ0MzA3
+									WjBnMR0wGwYDVQQDDBRNRCBBdXN0cmlhIHNpZ25hdHVyZTEYMBYGA1UECwwPdGVzdGNlcnRpZmlj
+									YXRlMR8wHQYDVQQKDBZicmVtZW4gb25saW5lIHNlcnZpY2VzMQswCQYDVQQGEwJkZTCCASIwDQYJ
+									KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJvEPjRA42SHSvaZn08TGugrG8CKS6+Wbu5IHMQDrS3F
+									YIRzb7adhs05g+pIj7uyP8MNlLafSsJPeeMBBvE3SPFxf+n6byaNSogCEg0gDYAo696rJkeS7Mlt
+									TEmQC7sg8WIvpLwwfGbzovfyAycvL7cgCure7mJCoJdOfFAaJgE5Avft1WzOVpaBMndc+V9icvqN
+									qDRmjNhrNCw6V5BI38LJ41frOyOwNbJq1jUlOnmRuP01lJh30k17AZ2mCnKb8umbW1HMvXOqh/jE
+									QpaKsmoFlJsGxmRDMWW4+tKVT2EUFTDoMHbdE5KPxBcNlw+d4cv2A6LZE9vOnOd6oL3XnxMCAwEA
+									AaOB7zCB7DAMBgNVHRMBAf8EAjAAMD8GA1UdJQQ4MDYGCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYB
+									BQUHAwQGCisGAQQBgjcUAgIGCisGAQQBgjcKAwwwHwYDVR0jBBgwFoAUGiUkn7zu6IWNXRVmYK2y
+									7cZUYE4wDgYDVR0PAQH/BAQDAgSwMB0GA1UdDgQWBBSeuWTX+ZlcGvTHc+GrJI/eL5RE3DBLBggr
+									BgEFBQcBAQQ/MD0wOwYIKwYBBQUHMAGGL2h0dHA6Ly9vY3NwLmJvcy1icmVtZW4uZGUvcHVibGlj
+									d2ViL3N0YXR1cy9vY3NwMA0GCSqGSIb3DQEBCwUAA4IBAQAz71cV+kXvUsuDC74EZ1f+xRBMTbj/
+									DTkGEY7i4NmttooEfrIizLUeaNLYKc4/j5zO/laA9ijLkCwawhiNjvVZGF//ycg8Fizs5DOyifN+
+									kmGVESW0nn91iDqjWUImxiNKm0d67RpsBH+nRP7D1WxXXMrBmGm9lvFbbXstV61uHACGxkICXF6q
+									XaDaNrsK/MOFPDnZihhmFA8VVijyH30He4DGbuASRWO5a2r1Ey64+I/ixx4aYKYQBbwgPWnnLGuj
+									VxwxOoDGvZ6Y9c26HeSg3qD6fyRxKqKJ7G41HO540IDMfdDEJ9fjfbIYScGwR9B+MgdMDmi8sjKR
+									QS6Z2KSz</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="digitalSignature">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIFHTCCBAWgAwIBAgIDCIGFMA0GCSqGSIb3DQEBBQUAMIGHMQswCQYDVQQGEwJBVDFIMEYGA1UE
+									Cgw/QS1UcnVzdCBHZXMuIGYuIFNpY2hlcmhlaXRzc3lzdGVtZSBpbSBlbGVrdHIuIERhdGVudmVy
+									a2VociBHbWJIMRYwFAYDVQQLDA1hLXNpZ24tU1NMLTAzMRYwFAYDVQQDDA1hLXNpZ24tU1NMLTAz
+									MB4XDTExMDEyNzEwNDIyMVoXDTE2MDEyNzEwNDIyMVowgbAxCzAJBgNVBAYTAkFUMSYwJAYDVQQK
+									DB1HUkFaIFVOSVZFUlNJVFkgT0YgVEVDSE5PTE9HWTFIMEYGA1UECww/SW5zdGl0dXRlIGZvciBB
+									cHBsaWVkIEluZm9ybWF0aW9uIFByb2Nlc3NpbmcgYW5kIENvbW11bmljYXRpb25zMRgwFgYDVQQD
+									DA9hcHBzLmVnaXouZ3YuYXQxFTATBgNVBAUTDDc2NjkwMjQ3NzE1MzCB3zANBgkqhkiG9w0BAQEF
+									AAOBzQAwgckCgcEAwqd/h0U5zKHB5fWKNDQFQILA7Trw+PmzRkcgQ1G5hp5IYjUhAz1ZppYuyI2B
+									EHhk51dVcXGATa6MV3DMNqC4BrTTRa2qSjnRqablxp/HlPV8AxiGeJA4BDaFL1c2DMel86bp7OnP
+									1pHqXIPgmIKQsls1A5GV4xLOVJ6IqQJ/KYrAb68ocYr9zKShyLnHPZCSemMwUbPvJkLVutOo1un3
+									/StSkaZ35oSDg0JjOloZkQSEmyGnZJa2leu0Iz4GdggfAgMBAAGjggGpMIIBpTATBgNVHSMEDDAK
+									gAhAPqHTYrQD3TByBggrBgEFBQcBAQRmMGQwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3NwLmEtdHJ1
+									c3QuYXQvb2NzcDA5BggrBgEFBQcwAoYtaHR0cDovL3d3dy5hLXRydXN0LmF0L2NlcnRzL2Etc2ln
+									bi1zc2wtMDMuY3J0MEsGA1UdIAREMEIwQAYGKigAEQEUMDYwNAYIKwYBBQUHAgEWKGh0dHA6Ly93
+									d3cuYS10cnVzdC5hdC9kb2NzL2NwL2Etc2lnbi1zc2wwgY8GA1UdHwSBhzCBhDCBgaB/oH2Ge2xk
+									YXA6Ly9sZGFwLmEtdHJ1c3QuYXQvb3U9YS1zaWduLVNTTC0wMyxvPUEtVHJ1c3QsYz1BVD9jZXJ0
+									aWZpY2F0ZXJldm9jYXRpb25saXN0P2Jhc2U/b2JqZWN0Y2xhc3M9ZWlkQ2VydGlmaWNhdGlvbkF1
+									dGhvcml0eTARBgNVHQ4ECgQIS02Y54XCFXkwDgYDVR0PAQH/BAQDAgWgMAkGA1UdEwQCMAAwDQYH
+									KigACgEBAgQCBQAwDQYJKoZIhvcNAQEFBQADggEBAHpzR5CAguCNiL/NNadOHlXbOxI6FpLujIIO
+									0MftuNmY4d8lkIdCEdliOXm5cpY3HyOt4+OrVHNFCXt8OTIcZcQ46BUbjf2rMei+DiSvtnkJuWz3
+									aqWQn1OTYdOGTa6TF/0sZQ+SxdXHB4HhbW33wQkPibCgn+6eNM7PXjSvtDFukbg1acynj0bCWbgC
+									dcDafwtxvrjYi2+FdndKy9Z9kCwjZs8apc8l64ceoHGVKAvCN6qfM0lnXiP8wm4uMZSQnrkRMx4+
+									PZUxYZJW6qPv8w6aWTAh6EXLBTlKf/esTrTk29uI2TRQttQTxGbssZoFz3ErcBE5hEja2ImPUt6G
+									7fM=</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="keyEncipherment">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>https://apps.egiz.gv.at/spocsgw/spocs?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSLeDeliveryExtension>
+									<p1:eDeliveryRealmName>ZUSTELLUNG.GV.AT</p1:eDeliveryRealmName>
+									<p1:countryCode>AT</p1:countryCode>
+									<p1:supported_eAddressSchemas>
+										<p1:supported_eAddressSchema>RFC5322-address</p1:supported_eAddressSchema>
+									</p1:supported_eAddressSchemas>
+									<p1:supportedAuthenticationLevels>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Basic</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Enhanced</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Strong</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#AdES</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#AdES-Plus</p1:supportedAuthLevel>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#QES</p1:supportedAuthLevel>
+									</p1:supportedAuthenticationLevels>
+									<p1:supportedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#DeliveryNonDeliveryToRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RetrievalNonRetrievalByRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#AcceptanceRejectionByRecipient</p1:supportedEvidence>
+									</p1:supportedEvidenceList>
+									<p1:requestedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#DeliveryNonDeliveryToRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RetrievalNonRetrievalByRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#AcceptanceRejectionByRecipient</p1:supportedEvidence>
+									</p1:requestedEvidenceList>
+								</p1:TSLeDeliveryExtension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+			</tsl:TSPServices>
+		</tsl:TrustServiceProvider>
+
+		<tsl:TrustServiceProvider>
+			<tsl:TSPInformation>
+				<tsl:TSPName>
+					<tsl:Name xml:lang="en">SIS DEMO eSafe</tsl:Name>
+				</tsl:TSPName>
+				<tsl:TSPAddress>
+					<tsl:PostalAddresses>
+						<tsl:PostalAddress xml:lang="en">
+							<tsl:StreetAddress>Siemensstrasse 92</tsl:StreetAddress>
+							<tsl:Locality>Vienna</tsl:Locality>
+							<tsl:PostalCode>1210</tsl:PostalCode>
+							<tsl:CountryName>AT</tsl:CountryName>
+						</tsl:PostalAddress>
+					</tsl:PostalAddresses>
+					<tsl:ElectronicAddress>
+						<tsl:URI>mailto:Bernd.martin@siemens.com</tsl:URI>
+					</tsl:ElectronicAddress>
+				</tsl:TSPAddress>
+				<tsl:TSPInformationURI>
+					<tsl:URI xml:lang="en">www.siemens.com</tsl:URI>
+				</tsl:TSPInformationURI>
+			</tsl:TSPInformation>
+			<tsl:TSPServices>
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/eSafe/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">localhost</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEMjCCAxqgAwIBAgIIUWHh0h+CZ4swDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTAxMjIxMTUwNDEzWhcNMTMxMjIwMTUwNDEz
+									WjBcMRIwEAYDVQQDDAlsb2NhbGhvc3QxGDAWBgNVBAsMD3Rlc3RjZXJ0aWZpY2F0ZTEfMB0GA1UE
+									CgwWYnJlbWVuIG9ubGluZSBzZXJ2aWNlczELMAkGA1UEBhMCZGUwggEiMA0GCSqGSIb3DQEBAQUA
+									A4IBDwAwggEKAoIBAQDZKoOkESZdvx71WQHD1zN2uaAmbe/FW6+Gpzt7CfIb6xMsPENvVKXJiC6A
+									tVotKGxRQ2Ucdi8iIbE+kz0ispf6DIEo8Q2A12Pbyf/4IWf49otQdsWk9efUvw8KE+IBfvGVH3Rx
+									XxqyyyIWT8iiEfzPGUnr6xsJD2QRibdmZsYBCbHkl/49QV5QJUICQI+oY+Xnu3548JPzxQlu2IK2
+									zXqlD/56qhACFcKFAc0bD/8xy+iwg4yYUdbHJOAdYjFlMjknue28VQrOJA+vwmgTlcmLAQ2CySpW
+									gd+4xDWPRE+9OlREJcLHWBkwuifT+1pbddzuG7IXoZszhqNREPLb3VRTAgMBAAGjge8wgewwDAYD
+									VR0TAQH/BAIwADA/BgNVHSUEODA2BggrBgEFBQcDAQYIKwYBBQUHAwIGCCsGAQUFBwMEBgorBgEE
+									AYI3FAICBgorBgEEAYI3CgMMMB8GA1UdIwQYMBaAFBolJJ+87uiFjV0VZmCtsu3GVGBOMA4GA1Ud
+									DwEB/wQEAwIEsDAdBgNVHQ4EFgQUqJZvW3Xl3EcPMgkEoPJXdcdVvd8wSwYIKwYBBQUHAQEEPzA9
+									MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5ib3MtYnJlbWVuLmRlL3B1YmxpY3dlYi9zdGF0dXMv
+									b2NzcDANBgkqhkiG9w0BAQsFAAOCAQEAMGYAY+Mw/a7fpSr0jWbN7y8+dnRGaE5uFhIRC2nMuHSW
+									qGfdLL9rnlSKtiMujBeq7RQcHFJg9vaJVpCjTqvz6zqCMkXq79GEnQzAVUE/xX6gGS9XtV6CfgeG
+									3COiDq/dyOo0CBnNQV+nuSJ5vygE7nCKtE4nayu8ka/fanpR2Qak7Tt9saQ0VTzFsR1n0f0ZVsk+
+									L0QKFCbPOUNhjy4X9DIhiPkqTMqiPaz4hu1u2V9QkUbwbwsP7sdF+f/ne4yMWo3CyEdTIiDe00Dd
+									8PdhsqYbN9XOUKTm9VMPb+6wmpmiXP2Gff1Vshln5HzYZp0mR+jPfXMAk9lYyoKipmQyQA==</tsl:X509Certificate>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>https://localhost:8081/SPWP3s_eSafe_Demo_Portal_JEE/SpocsDocumentExchangeInfoServiceV1eSafe?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSLeSafeExtension>
+									<p1:countryCode>AT</p1:countryCode>
+									<p1:eSafeoperationMode>
+										<p1:eSafeOperationMode>PUSH</p1:eSafeOperationMode>
+									</p1:eSafeoperationMode>
+								</p1:TSLeSafeExtension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/eSafe/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">barbie.si.sisat.siemens.com</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIERDCCAyygAwIBAgIIBUS1gXfN68YwDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTAxMjIxMTUwNTQxWhcNMTMxMjIwMTUwNTQx
+									WjBuMSQwIgYDVQQDDBtiYXJiaWUuc2kuc2lzYXQuc2llbWVucy5jb20xGDAWBgNVBAsMD3Rlc3Rj
+									ZXJ0aWZpY2F0ZTEfMB0GA1UECgwWYnJlbWVuIG9ubGluZSBzZXJ2aWNlczELMAkGA1UEBhMCZGUw
+									ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDO4XujIwy1RH3RlViYq8TPZIxlzHtFT1JJ
+									ovounFHnXM/x15lSK7zHYFl3Hj/NS4yhx7RjznZnXtXD6G0LkavAhS06UrTqDDtp+dZri5sxO3qe
+									EhBjqK7Qlu59pmYnC/trZ6i15SfkLxoTEGlTzBB0h0pyjCUFupizGJ7Gx8Ra1P6gVx+vyr5WlnjK
+									ptkD9XY8ZijginoafOLOJN/WMzSMN3GjcbSlWKr/jxc4MtGt3jTHV6uFOnVqU0lYmZylo5rhPe9h
+									hMgPW1VMkqAxiiC2ahz4mZoDiX6q75B+kv/hB74zxfo8uOLbynqLf2QYB3du/mNSL1l8RRnVYgiI
+									4AlVAgMBAAGjge8wgewwDAYDVR0TAQH/BAIwADA/BgNVHSUEODA2BggrBgEFBQcDAQYIKwYBBQUH
+									AwIGCCsGAQUFBwMEBgorBgEEAYI3FAICBgorBgEEAYI3CgMMMB8GA1UdIwQYMBaAFBolJJ+87uiF
+									jV0VZmCtsu3GVGBOMA4GA1UdDwEB/wQEAwIEsDAdBgNVHQ4EFgQUha9hIm7MStopFwsKK8rDnPOl
+									0MQwSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5ib3MtYnJlbWVuLmRl
+									L3B1YmxpY3dlYi9zdGF0dXMvb2NzcDANBgkqhkiG9w0BAQsFAAOCAQEAFJtaOJC8keM/aZkE8Sxf
+									ASIyClacxY9/m1lcrJ/amK2TTLnCLGEuKPAxImCpheK20PHS0FKgok/bMS5QnDA6X3vqNg8H7Vqj
+									xAuhuCdNAVaGTmVym4YL+E8S047iXjfwkPyotzEsyqWm3dWu6MPhYliRQ91N8MzAt/dSYgWw9ock
+									rHft0LjsM0WIQzdcHbXzVLiQ7UZFJDONlsix0GtKn1yKgOkvA929LXtk6n13iyhbNr1FEE+TMoQw
+									drMPboYEZsEQiyq5OphhMsvy0HYdKPoOmyXeFFETzY5XGAcOyL8HGVhwwhVLe5OKi1/Vu+DHnAc+
+									+0MM5fbIgRBVqy4u/w==</tsl:X509Certificate>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>https://158.226.202.100:8081/SPWP3s_eSafe_Demo_Portal_JEE/SpocsDocumentExchangeInfoServiceV1eSafe?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSLeSafeExtension>
+									<p1:countryCode>AT</p1:countryCode>
+									<p1:eSafeoperationMode>
+										<p1:eSafeOperationMode>PUSH</p1:eSafeOperationMode>
+									</p1:eSafeoperationMode>
+								</p1:TSLeSafeExtension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+
+
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/syndicationModule/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">AT_SyndicationModule</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEODCCAyCgAwIBAgIIBPCLzUNyy7swDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTEwMTIxMTMxMjI5WhcNMTQwMTIwMTMxMjI5
+									WjBiMRgwFgYDVQQDDA9UZXN0RW52aXJvbm1lbnQxGDAWBgNVBAsMD3Rlc3RjZXJ0aWZpY2F0ZTEf
+									MB0GA1UECgwWYnJlbWVuIG9ubGluZSBzZXJ2aWNlczELMAkGA1UEBhMCZGUwggEiMA0GCSqGSIb3
+									DQEBAQUAA4IBDwAwggEKAoIBAQCZ/YmyPys0SXQo+Br8PEVptIn9SIYSUIOz97znGm7zX1ZjIUCZ
+									cTzgRZuvm7hzUXQTUM/9Kp4IHh3h2A2tXuicy1CH0VYyn7VUsBgQ4KKsnigX9PiAUNOX/HS2udQb
+									byWpOOvY/dAH8GKBrwaGf7M8nHXsLesklMWxE0TD7qgWBEiLcNxWYcpFOBoYi4JLPPARCi2CBJps
+									d+t+vi2Wha0UORQguAxpzqSSPS3e/tIl3jnJxB0w5AodnIIbF+PW6AFrefL8Xxq95VyMxyLAGMND
+									20XQ2dP1CebrrTlP8h0uPNItViOnPFisIV8baKuO19BtgFx2UgYUgcAfCD+nKuwnAgMBAAGjge8w
+									gewwDAYDVR0TAQH/BAIwADA/BgNVHSUEODA2BggrBgEFBQcDAQYIKwYBBQUHAwIGCCsGAQUFBwME
+									BgorBgEEAYI3FAICBgorBgEEAYI3CgMMMB8GA1UdIwQYMBaAFBolJJ+87uiFjV0VZmCtsu3GVGBO
+									MA4GA1UdDwEB/wQEAwIEsDAdBgNVHQ4EFgQUlhjLu2X1E6hzSsVHHRkJpQAILy4wSwYIKwYBBQUH
+									AQEEPzA9MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5ib3MtYnJlbWVuLmRlL3B1YmxpY3dlYi9z
+									dGF0dXMvb2NzcDANBgkqhkiG9w0BAQsFAAOCAQEAjkbCBEsu4XXGtokhVSC+nvapKEE2oB3mlk4V
+									bUKeO4RX78D/5lNgicdpWab8uB4L9gf5JfUNmf4BOKd/mRw87yI4Nbw3zObpO4PECvFmdrQ7Qh+y
+									RIjnnadq/wYKmqZ5yDO5gATgpxk19T2GaSQeuiimqEoQ5iOCGgE3oNj76ui5hrJ9gjENLRCeZp7j
+									EizzNmdWpDupQ25gmncNaJ4cjUvBzCs2JPJwoUC97pDJF2VBhVhG7q2Q9QZVVQXFH69ZRERaZftw
+									suJkzPQM/fcak1DLsRtkNE/P9W+aRRBDZvoKKaXTUxmAm59C3hUGypCcJHckq4DF3lGoItp//zdY
+									PA==</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="digitalSignature">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>http://localhost:8080/WP4Routing_AT/spocsRouting?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSL_syndicationModule_Extension>
+								</p1:TSL_syndicationModule_Extension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+
+
+
+			</tsl:TSPServices>
+		</tsl:TrustServiceProvider>
+		<tsl:TrustServiceProvider>
+			<tsl:TSPInformation>
+				<tsl:TSPName>
+					<tsl:Name xml:lang="en">SIS DEMO PSC</tsl:Name>
+				</tsl:TSPName>
+				<tsl:TSPAddress>
+					<tsl:PostalAddresses>
+						<tsl:PostalAddress xml:lang="en">
+							<tsl:StreetAddress>Siemensstrasse 92</tsl:StreetAddress>
+							<tsl:Locality>Vienna</tsl:Locality>
+							<tsl:PostalCode>1210</tsl:PostalCode>
+							<tsl:CountryName>AT</tsl:CountryName>
+						</tsl:PostalAddress>
+					</tsl:PostalAddresses>
+					<tsl:ElectronicAddress>
+						<tsl:URI>mailto:Bernd.martin@siemens.com</tsl:URI>
+					</tsl:ElectronicAddress>
+				</tsl:TSPAddress>
+				<tsl:TSPInformationURI>
+					<tsl:URI xml:lang="en">www.siemens.com</tsl:URI>
+				</tsl:TSPInformationURI>
+			</tsl:TSPInformation>
+			<tsl:TSPServices>
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/PSC/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">localhost</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIEMjCCAxqgAwIBAgIIUWHh0h+CZ4swDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTAxMjIxMTUwNDEzWhcNMTMxMjIwMTUwNDEz
+									WjBcMRIwEAYDVQQDDAlsb2NhbGhvc3QxGDAWBgNVBAsMD3Rlc3RjZXJ0aWZpY2F0ZTEfMB0GA1UE
+									CgwWYnJlbWVuIG9ubGluZSBzZXJ2aWNlczELMAkGA1UEBhMCZGUwggEiMA0GCSqGSIb3DQEBAQUA
+									A4IBDwAwggEKAoIBAQDZKoOkESZdvx71WQHD1zN2uaAmbe/FW6+Gpzt7CfIb6xMsPENvVKXJiC6A
+									tVotKGxRQ2Ucdi8iIbE+kz0ispf6DIEo8Q2A12Pbyf/4IWf49otQdsWk9efUvw8KE+IBfvGVH3Rx
+									XxqyyyIWT8iiEfzPGUnr6xsJD2QRibdmZsYBCbHkl/49QV5QJUICQI+oY+Xnu3548JPzxQlu2IK2
+									zXqlD/56qhACFcKFAc0bD/8xy+iwg4yYUdbHJOAdYjFlMjknue28VQrOJA+vwmgTlcmLAQ2CySpW
+									gd+4xDWPRE+9OlREJcLHWBkwuifT+1pbddzuG7IXoZszhqNREPLb3VRTAgMBAAGjge8wgewwDAYD
+									VR0TAQH/BAIwADA/BgNVHSUEODA2BggrBgEFBQcDAQYIKwYBBQUHAwIGCCsGAQUFBwMEBgorBgEE
+									AYI3FAICBgorBgEEAYI3CgMMMB8GA1UdIwQYMBaAFBolJJ+87uiFjV0VZmCtsu3GVGBOMA4GA1Ud
+									DwEB/wQEAwIEsDAdBgNVHQ4EFgQUqJZvW3Xl3EcPMgkEoPJXdcdVvd8wSwYIKwYBBQUHAQEEPzA9
+									MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5ib3MtYnJlbWVuLmRlL3B1YmxpY3dlYi9zdGF0dXMv
+									b2NzcDANBgkqhkiG9w0BAQsFAAOCAQEAMGYAY+Mw/a7fpSr0jWbN7y8+dnRGaE5uFhIRC2nMuHSW
+									qGfdLL9rnlSKtiMujBeq7RQcHFJg9vaJVpCjTqvz6zqCMkXq79GEnQzAVUE/xX6gGS9XtV6CfgeG
+									3COiDq/dyOo0CBnNQV+nuSJ5vygE7nCKtE4nayu8ka/fanpR2Qak7Tt9saQ0VTzFsR1n0f0ZVsk+
+									L0QKFCbPOUNhjy4X9DIhiPkqTMqiPaz4hu1u2V9QkUbwbwsP7sdF+f/ne4yMWo3CyEdTIiDe00Dd
+									8PdhsqYbN9XOUKTm9VMPb+6wmpmiXP2Gff1Vshln5HzYZp0mR+jPfXMAk9lYyoKipmQyQA==</tsl:X509Certificate>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>https://localhost:8081/SPWP3s_PSC_Demo_Portal_JEE/SpocsDocumentExchangeInfoServiceV1Psc?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSL_PSC_Extension>
+									<p1:countryCode>AT</p1:countryCode>
+								</p1:TSL_PSC_Extension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/PSC/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">barbie.si.sisat.siemens.com</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIERDCCAyygAwIBAgIIBUS1gXfN68YwDQYJKoZIhvcNAQELBQAwZDEaMBgGA1UEAwwRYm9zIGFk
+									dmFuY2VkIENBIDIxGDAWBgNVBAsMD3Rlc3R1bml0IGludGVybjEfMB0GA1UECgwWYnJlbWVuIG9u
+									bGluZSBzZXJ2aWNlczELMAkGA1UEBhMCREUwHhcNMTAxMjIxMTUwNTQxWhcNMTMxMjIwMTUwNTQx
+									WjBuMSQwIgYDVQQDDBtiYXJiaWUuc2kuc2lzYXQuc2llbWVucy5jb20xGDAWBgNVBAsMD3Rlc3Rj
+									ZXJ0aWZpY2F0ZTEfMB0GA1UECgwWYnJlbWVuIG9ubGluZSBzZXJ2aWNlczELMAkGA1UEBhMCZGUw
+									ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDO4XujIwy1RH3RlViYq8TPZIxlzHtFT1JJ
+									ovounFHnXM/x15lSK7zHYFl3Hj/NS4yhx7RjznZnXtXD6G0LkavAhS06UrTqDDtp+dZri5sxO3qe
+									EhBjqK7Qlu59pmYnC/trZ6i15SfkLxoTEGlTzBB0h0pyjCUFupizGJ7Gx8Ra1P6gVx+vyr5WlnjK
+									ptkD9XY8ZijginoafOLOJN/WMzSMN3GjcbSlWKr/jxc4MtGt3jTHV6uFOnVqU0lYmZylo5rhPe9h
+									hMgPW1VMkqAxiiC2ahz4mZoDiX6q75B+kv/hB74zxfo8uOLbynqLf2QYB3du/mNSL1l8RRnVYgiI
+									4AlVAgMBAAGjge8wgewwDAYDVR0TAQH/BAIwADA/BgNVHSUEODA2BggrBgEFBQcDAQYIKwYBBQUH
+									AwIGCCsGAQUFBwMEBgorBgEEAYI3FAICBgorBgEEAYI3CgMMMB8GA1UdIwQYMBaAFBolJJ+87uiF
+									jV0VZmCtsu3GVGBOMA4GA1UdDwEB/wQEAwIEsDAdBgNVHQ4EFgQUha9hIm7MStopFwsKK8rDnPOl
+									0MQwSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5ib3MtYnJlbWVuLmRl
+									L3B1YmxpY3dlYi9zdGF0dXMvb2NzcDANBgkqhkiG9w0BAQsFAAOCAQEAFJtaOJC8keM/aZkE8Sxf
+									ASIyClacxY9/m1lcrJ/amK2TTLnCLGEuKPAxImCpheK20PHS0FKgok/bMS5QnDA6X3vqNg8H7Vqj
+									xAuhuCdNAVaGTmVym4YL+E8S047iXjfwkPyotzEsyqWm3dWu6MPhYliRQ91N8MzAt/dSYgWw9ock
+									rHft0LjsM0WIQzdcHbXzVLiQ7UZFJDONlsix0GtKn1yKgOkvA929LXtk6n13iyhbNr1FEE+TMoQw
+									drMPboYEZsEQiyq5OphhMsvy0HYdKPoOmyXeFFETzY5XGAcOyL8HGVhwwhVLe5OKi1/Vu+DHnAc+
+									+0MM5fbIgRBVqy4u/w==</tsl:X509Certificate>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>https://158.226.202.100:8081/SPWP3s_PSC_Demo_Portal_JEE/SpocsDocumentExchangeInfoServiceV1Psc?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSL_PSC_Extension>
+									<p1:countryCode>AT</p1:countryCode>
+								</p1:TSL_PSC_Extension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+			</tsl:TSPServices>
+		</tsl:TrustServiceProvider>
+		<tsl:TrustServiceProvider>
+			<tsl:TSPInformation>
+				<tsl:TSPName>
+					<tsl:Name xml:lang="en">Infocert s.p.a</tsl:Name>
+				</tsl:TSPName>
+				<tsl:TSPAddress>
+					<tsl:PostalAddresses>
+						<tsl:PostalAddress xml:lang="en">
+							<tsl:StreetAddress>Corso Stati Uniti, 14</tsl:StreetAddress>
+							<tsl:Locality>PADOVA</tsl:Locality>
+							<tsl:PostalCode>35127 </tsl:PostalCode>
+							<tsl:CountryName>IT</tsl:CountryName>
+						</tsl:PostalAddress>
+					</tsl:PostalAddresses>
+					<tsl:ElectronicAddress>
+						<tsl:URI>mailto:testTSL@infocert.it</tsl:URI>
+					</tsl:ElectronicAddress>
+				</tsl:TSPAddress>
+				<tsl:TSPInformationURI>
+					<tsl:URI xml:lang="en">www.infocert.it</tsl:URI>
+				</tsl:TSPInformationURI>
+			</tsl:TSPInformation>
+			<tsl:TSPServices>
+				<tsl:TSPService>
+					<tsl:ServiceInformation>
+						<tsl:ServiceTypeIdentifier>http://uri.spocs-eu.eu/Svctype/eDelivery/v1</tsl:ServiceTypeIdentifier>
+						<tsl:ServiceName>
+							<tsl:Name xml:lang="en">SPOCSGateway@legalmail.it</tsl:Name>
+						</tsl:ServiceName>
+						<tsl:ServiceDigitalIdentity>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIGMTCCBRmgAwIBAgICI6gwDQYJKoZIhvcNAQEFBQAwgYcxCzAJBgNVBAYTAklUMRUwEwYDVQQK
+									DAxJTkZPQ0VSVCBTUEExFDASBgNVBAUTCzA3OTQ1MjExMDA2MRswGQYDVQQLDBJFbnRlIENlcnRp
+									ZmljYXRvcmUxLjAsBgNVBAMMJUluZm9DZXJ0IFNlcnZpemkgZGkgQ2VydGlmaWNhemlvbmUgRVgw
+									HhcNMDkwOTE0MTEzMDEyWhcNMTIwOTE0MDAwMDAwWjCCARMxCzAJBgNVBAYTAklUMRgwFgYDVQQK
+									DA9JbmZvQ2VydCBTLnAuQS4xFjAUBgNVBAsMDUFyZWEgU3ZpbHVwcG8xKzApBgNVBAMMIlNlcnZp
+									emkgUG9zdGEgQ2VydGlmaWNhdGEgU3ZpbHVwcG8xFDASBgNVBAUTCzA3OTQ1MjExMDA2MTYwNAYJ
+									KoZIhvcNAQkBFidwb3N0YS1jZXJ0aWZpY2F0YUBzdmlsY2VydC5sZWdhbG1haWwuaXQxETAPBgNV
+									BCoMCFN2aWx1cHBvMQ4wDAYDVQQEDAVQb3N0YTEjMCEGA1UELhMaUG9zdGEgU3ZpbHVwcG8vMDc5
+									NDUyMTEwMDYxDzANBgNVBAcMBlBBRE9WQTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAxzTo
+									3rGakWMh5cX4By+N47zMd2Jk+jTdi2lZhPztZ48fzUAVt6AmHCENFW1k5sqHWvVWDRRnj17wM+eg
+									D5mfLip+6F2xWLWgZK481lk64P8A14TQ8kUKp68gH6dv92cwsyKfgSZyeOqOa3z4ZiggS4Mmj6Pr
+									Gwu7W+DVM5ZhoU0CAwEAAaOCApowggKWMGUGA1UdIAReMFwwWgYGK0wkAQEIMFAwTgYIKwYBBQUH
+									AgIwQgxASW5mb0NlcnQgU3BBIFNTTCwgU01JTUUgYW5kIGRpZ2l0YWwgc2lnbmF0dXJlIENsaWVu
+									dCBDZXJ0aWZpY2F0ZTAyBgNVHREEKzApgSdwb3N0YS1jZXJ0aWZpY2F0YUBzdmlsY2VydC5sZWdh
+									bG1haWwuaXQwVgYIKwYBBQUHAQEESjBIMEYGCCsGAQUFBzABhjpodHRwOi8vb2NzcHN2LmludHJh
+									LmluZm9jZXJ0Lml0L09DU1BTZXJ2ZXJfSUNFL09DU1BTZXJ2bGV0MA4GA1UdDwEB/wQEAwIEsDAd
+									BgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwJQYDVR0SBB4wHIEaZmlybWEuZGlnaXRhbGVA
+									aW5mb2NlcnQuaXQwHwYDVR0jBBgwFoAUK9EsahsJ46qaMsSd3gmTkZXmggwwggEJBgNVHR8EggEA
+									MIH9MIG8oIG5oIG2hoGzbGRhcDovL2xkYXAtaWNlLWV4LmludHJhLmluZm9jZXJ0Lml0OjUxMDMx
+									L2NuJTNkSW5mb0NlcnQlMjBTZXJ2aXppJTIwZGklMjBDZXJ0aWZpY2F6aW9uZSUyMENSTDAxJTIw
+									RVgsb3UlM2RFbnRlJTIwQ2VydGlmaWNhdG9yZSxvJTNkSU5GT0NFUlQlMjBTUEEsYyUzZElUP2Nl
+									cnRpZmljYXRlUmV2b2NhdGlvbkxpc3QwPKA6oDiGNmh0dHA6Ly9jYXJtZXguaW50cmEuaW5mb2Nl
+									cnQuaXQvSW5mb0NlcnQvQVVUL0NSTDAxLmNybDAdBgNVHQ4EFgQU0qnYZbyt80O2kpJX9LdtnkyD
+									b1QwDQYJKoZIhvcNAQEFBQADggEBABCFarswD4+724udMe32S59aLzLeXE4Qio+XTSmfiJG1wruL
+									kxhjMEva+Fpaxagj1b6O0AwxxJc9WzJFCz2BUveB+EsRCmxdwSpbpF59CVVCTvfgvo/ZjjONlTkY
+									JdnXHYiW/4MdkgDvgu0rc0vE54/uWyFxv+Rxco/Lnkn/2N6SYSEFubjavTWLC74gJ5WBPgWDafP5
+									yzv3eQFxG8snAjogIByCBIQyVx5BqZGTj/kM3m3+U2daBd2VXk+pkhlsgkRn5u2tAsb2EG4pyGsi
+									Euuir8YkyQxwV0fmVIxywCAju2LumVSbZOvi4qfZbWaFBt4FD1N6m3zuX5hUty5nIf0=</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="digitalSignature">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:X509Certificate>MIIGBDCCBOygAwIBAgIDAJtGMA0GCSqGSIb3DQEBBQUAMGsxCzAJBgNVBAYTAklUMRUwEwYDVQQK
+									EwxJbmZvQ2VydCBTcEExGjAYBgNVBAsTEUludGVybmV0IFNlcnZpY2VzMSkwJwYDVQQDEyBJbmZv
+									Q2VydCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0xMDA5MjgxNDM2MzlaFw0xMTA5MjgwMDAw
+									MDBaMIHFMQswCQYDVQQGEwJJVDEkMCIGA1UEChMbSW5mb0NlcnQgUy5wLkEuLzA3OTQ1MjExMDA2
+									MSAwHgYDVQQLExdDZXJ0aWZpY2F6aW9uZSBEaWdpdGFsZTEgMB4GA1UEAxMXbGVnYWxtYWlsY2wu
+									aW5mb2NlcnQuaXQxLTArBgkqhkiG9w0BCQEWHnNpc3RlbWkubWlkZGxld2FyZUBpbmZvY2VydC5p
+									dDENMAsGA1UEBxMEUm9tYTEOMAwGA1UECBMFSXRhbHkwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJ
+									AoGBAMjD0fiiEms+DF/spIPLS/u8Vzy9Z0x35t6F9FG4gGYbYBiF2YeKYfovd/fFwp9+G8sEPf5L
+									eqyGktIu8lskORCkzxaNXozhxJ0TKbhk7kos5w7rBTOrvp/wD1XzcFgF7bINrtxHO1jQqy4xEuIM
+									nQXPlaQ7pacKB9xoEsAjvThdAgMBAAGjggLYMIIC1DAMBgNVHRMBAf8EAjAAMIGQBgNVHSAEgYgw
+									gYUwgYIGBitMJAEBBTB4MDEGCCsGAQUFBwICMCUaI0luZm9DZXJ0IFNwQSBTU0wgU2VydmVyIENl
+									cnRpZmljYXRlMEMGCCsGAQUFBwIBFjdodHRwOi8vd3d3LmZpcm1hLmluZm9jZXJ0Lml0L2RvY3Vt
+									ZW50YXppb25lL21hbnVhbGkucGhwMCkGA1UdEQQiMCCBHnNpc3RlbWkubWlkZGxld2FyZUBpbmZv
+									Y2VydC5pdDBOBggrBgEFBQcBAQRCMEAwPgYIKwYBBQUHMAGGMmh0dHA6Ly9vY3NwLmluZm9jZXJ0
+									Lml0L09DU1BTZXJ2ZXJfSUNFL09DU1BTZXJ2bGV0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAK
+									BggrBgEFBQcDATAlBgNVHRIEHjAcgRpmaXJtYS5kaWdpdGFsZUBpbmZvY2VydC5pdDCBogYDVR0j
+									BIGaMIGXgBTyywHKv8WAY7fZk6x9OqQdA9FQjKF5pHcwdTELMAkGA1UEBhMCVVMxGDAWBgNVBAoT
+									D0dURSBDb3Jwb3JhdGlvbjEnMCUGA1UECxMeR1RFIEN5YmVyVHJ1c3QgU29sdXRpb25zLCBJbmMu
+									MSMwIQYDVQQDExpHVEUgQ3liZXJUcnVzdCBHbG9iYWwgUm9vdIIEBycWOTCBpQYDVR0fBIGdMIGa
+									MIGXoIGUoIGRhoGObGRhcDovL2xkYXAuaW5mb2NlcnQuaXQvY24lM2RJbmZvQ2VydCUyMENlcnRp
+									ZmljYXRpb24lMjBBdXRob3JpdHksb3UlM2RJbnRlcm5ldCUyMFNlcnZpY2VzLG8lM2RJbmZvQ2Vy
+									dCUyMFNwQSxjJTNkSVQ/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdDAdBgNVHQ4EFgQUhkKh/OHc
+									fty4ox2mF6ZjH5WWzZcwDQYJKoZIhvcNAQEFBQADggEBAIqd1QNY9xcSsUEwQyFSLsXIikSQ3Tk9
+									848SpqZwRMQ2jFamvh4wC27/thsHifyUnVzORqA1rsasEwaVCmH3qnj5WpXUDoT8HoDdChaa8ci4
+									APMDVnNhEY2ivitAvEk8lSTXMUtCchDEQNscCLTWI4oxAwO6pLNTrMBOmTpVJM22btFtz2GvK/JQ
+									wxvy9vH5vMNuU2pDXn36LuuWgpEcUZO9ln/zpkkoxMUNzPC1yKDYLCd5IA6j+8X/0m49Zy9eTqxC
+									Llz+tqCR4GhAvGetS8QZbpDhW+Yaf1I7Y0oz5fE2HnsqSyNcgDAuU7GbwYHYO56i1gzkuFnBc6Sj
+									OAoAE6s=</tsl:X509Certificate>
+							</tsl:DigitalId>
+							<tsl:DigitalId>
+								<tsl:Other>
+									<sie:KeyUsage>
+										<sie:KeyUsageBit name="keyEncipherment">true</sie:KeyUsageBit>
+									</sie:KeyUsage>
+								</tsl:Other>
+							</tsl:DigitalId>
+						</tsl:ServiceDigitalIdentity>
+						<tsl:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</tsl:ServiceStatus>
+						<tsl:StatusStartingTime>2011-01-20T23:59:59Z</tsl:StatusStartingTime>
+						<tsl:ServiceSupplyPoints>
+							<tsl:ServiceSupplyPoint>https://spocscl.infocert.it/EMGP_FE/spocs?wsdl</tsl:ServiceSupplyPoint>
+						</tsl:ServiceSupplyPoints>
+						<tsl:ServiceInformationExtensions>
+							<tsl:Extension Critical="true">
+								<p1:TSLeDeliveryExtension>
+									<p1:eDeliveryRealmName>PEC</p1:eDeliveryRealmName>
+									<p1:countryCode>IT</p1:countryCode>
+									<p1:supported_eAddressSchemas>
+										<p1:supported_eAddressSchema>RFC822</p1:supported_eAddressSchema>
+									</p1:supported_eAddressSchemas>
+									<p1:managedDomains>
+										<p1:managedDomain>spocs.it</p1:managedDomain>
+									</p1:managedDomains>
+									<p1:supportedAuthenticationLevels>
+										<p1:supportedAuthLevel>http:uri.etsi.org/REM/AuthMethod#Basic</p1:supportedAuthLevel>
+									</p1:supportedAuthenticationLevels>
+									<p1:supportedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDFailure</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#DeliveryNonDeliveryToRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+									</p1:supportedEvidenceList>
+									<p1:requestedEvidenceList>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDAcceptanceRejection</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#RelayREMMDFailure</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#DeliveryNonDeliveryToRecipient</p1:supportedEvidence>
+										<p1:supportedEvidence>http:uri.etsi.org/REM/Evidence#SubmissionAcceptanceRejection</p1:supportedEvidence>
+									</p1:requestedEvidenceList>
+								</p1:TSLeDeliveryExtension>
+							</tsl:Extension>
+						</tsl:ServiceInformationExtensions>
+					</tsl:ServiceInformation>
+				</tsl:TSPService>
+			</tsl:TSPServices>
+		</tsl:TrustServiceProvider>
+	</tsl:TrustServiceProviderList>
+	<ds:Signature Id="SPOCS_TEST" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+		<ds:SignedInfo>
+			<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+			<ds:SignatureMethod
+				Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+			<ds:Reference URI="#SPOCS_TEST_TSL_00005">
+				<ds:Transforms>
+					<ds:Transform
+						Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+					<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+				</ds:Transforms>
+				<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+				<ds:DigestValue>NIj7G5jYyuMBlNTrNtWGNfeTuZuTponpvdV9SeBR/Mo=</ds:DigestValue>
+			</ds:Reference>
+			<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties"
+				URI="#SPOCS_TEST-xades">
+				<ds:Transforms>
+					<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+				</ds:Transforms>
+				<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+				<ds:DigestValue>yohGG5juZLv3YsiAAXaUzB7G/JQrLpC5tMLZydSqqdM=</ds:DigestValue>
+			</ds:Reference>
+		</ds:SignedInfo>
+		<ds:SignatureValue Id="SPOCS_TEST-signature-value">ZrjEckXtUZ2RWbjpsL4gb05Y3dGWJF4iFsjLXIO8hF4lm8Dp3eHqv1tIzC2jR8EZ
+			begcv0m86l9W3KGL4NNcGSy1KCvqPE2YBwix0fF52PvZ628F8g60whtMevtphQ3M
+			43Q5T58XV8vi384nyY946bR5+uHaOlfTz9785iJbx5Oltk9HIgXdSqDqMpnue1iD
+			MC1PNetsxUUuDJtOeXciZzr/n7J/tvBGm31rF0fmMqi4GnsWvlF768pFmvuS7DoT
+			inI2PP1MYqNb//EOY9Xedl/k/ED09awb+wflay71nbc/RaaMGGYKdfBzhR6Wr7DT
+			tR5D7Spboqo4jWS5hXS3rg==</ds:SignatureValue>
+		<ds:KeyInfo>
+			<ds:X509Data>
+				<ds:X509Certificate>MIIExTCCA62gAwIBAgIBAzANBgkqhkiG9w0BAQsFADCBhTELMAkGA1UEBhMCRVUx
+					CzAJBgNVBAgTAkVVMQ4wDAYDVQQKEwVTUE9DUzEXMBUGA1UECxMOU1BPQ1MgVFNM
+					IFRFQU0xFjAUBgNVBAMTDVNQT0NTIFRFU1QgQ0ExKDAmBgkqhkiG9w0BCQEWGXNl
+					cnZpY2VkZXNrQGJvcy1icmVtZW4uZGUwHhcNMTEwMzAxMDAwMDM5WhcNMTIwMzAx
+					MDAwMDM5WjBrMQswCQYDVQQGEwJFVTELMAkGA1UEBxMCRVUxDjAMBgNVBAoTBVNQ
+					T0NTMSIwIAYDVQQLExlTUE9DUyBUU0wgTUFOQUdFTUVOVCBURUFNMRswGQYDVQQD
+					FBJTUE9DUyBURVNUIFNJR05FUgowggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+					AoIBAQCsDvmBb5Dy+u1fOz1xzeZ2lxdORf/clbRWvl3DuDM03imKZx/MCwa6Wezy
+					afSVyRrEwbITVBNut8tAuWmdbnb3Glex32g1ydWxL9m6XoCxwtQ4JNBAdAjDAB1u
+					1BRHNnsQt4HW9TkDrpfFE2e6PFEz9KkZIwvtjPAxKYx/yXu9ng3KpsBbq34Uy8Mb
+					7rSvbg8cjZnL5UNJeSwO5PcP6sybZay/Qx99CHThVJXw1D1nLQL7+RnRjx8z9Zpr
+					haFVkWYGd5xwSSovmm23zznz4am4AHXJpOCY79UrXEKwfrvurQhwg0dkeghwkDlt
+					WrKopm7cozSvsNJM5lfzcOo27PlfAgMBAAGjggFXMIIBUzAJBgNVHRMEAjAAMB0G
+					A1UdDgQWBBS7dCyc0ui2+ZnfZ2oIkmWPaLFL+DCBsgYDVR0jBIGqMIGngBQcas6d
+					wI03+nEiyvXouMfzGMY25aGBi6SBiDCBhTELMAkGA1UEBhMCRVUxCzAJBgNVBAgT
+					AkVVMQ4wDAYDVQQKEwVTUE9DUzEXMBUGA1UECxMOU1BPQ1MgVFNMIFRFQU0xFjAU
+					BgNVBAMTDVNQT0NTIFRFU1QgQ0ExKDAmBgkqhkiG9w0BCQEWGXNlcnZpY2VkZXNr
+					QGJvcy1icmVtZW4uZGWCAQEwDgYDVR0PAQH/BAQDAgbAMCQGA1UdEQQdMBuBGXNl
+					cnZpY2VkZXNrQGJvcy1icmVtZW4uZGUwJgYDVR0fBB8wHTAboBmgF4YVbGRhcDov
+					L2xvY2FsaG9zdDozODkvMBQGA1UdJQEB/wQKMAgGBgQAkTcDADANBgkqhkiG9w0B
+					AQsFAAOCAQEAbLyh079yGy8uannaoDmPp5dqzzK8sbQ+CU5TcfrDl404rHYhmlaq
+					tVDDKtr9d7evvzBmIAKP6Wu8qUwojb2gFlYq6f4s6AVrCGCEs8hwT1wpuaTYxDBU
+					50+oq38OEK0nnGnsyeyuXitynCa2YRQzv859jqXYeYyRTPXLVxhcmY7zRFw6/1xG
+					rXvD5qPrOVTJQIII1BqpaPGsNZDKvTiFHxSTdpLReZeYwGIvFntJL654OiMHkg7l
+					j+EGSW+yY7sPcoXW0v80kQVqpoYFog/kXjlwR5pcWL9Mk+jfI9fpxzMxYgMzB16A
+					g+3Sede6w3KbN26WfzOvroUWUoYxwh9vuQ==</ds:X509Certificate>
+				<ds:X509IssuerSerial>
+					<ds:X509IssuerName>EMAIL=servicedesk@bos-bremen.de,CN=SPOCS TEST CA,OU=SPOCS TSL TEAM,O=SPOCS,ST=EU,C=EU</ds:X509IssuerName>
+					<ds:X509SerialNumber>3</ds:X509SerialNumber>
+				</ds:X509IssuerSerial>
+			</ds:X509Data>
+			<ds:KeyValue>
+				<ds:RSAKeyValue>
+					<ds:Modulus>rA75gW+Q8vrtXzs9cc3mdpcXTkX/3JW0Vr5dw7gzNN4pimcfzAsGulns8mn0lcka
+						xMGyE1QTbrfLQLlpnW529xpXsd9oNcnVsS/Zul6AscLUOCTQQHQIwwAdbtQURzZ7
+						ELeB1vU5A66XxRNnujxRM/SpGSML7YzwMSmMf8l7vZ4NyqbAW6t+FMvDG+60r24P
+						HI2Zy+VDSXksDuT3D+rMm2Wsv0MffQh04VSV8NQ9Zy0C+/kZ0Y8fM/Waa4WhVZFm
+						BneccEkqL5ptt8858+GpuAB1yaTgmO/VK1xCsH677q0IcINHZHoIcJA5bVqyqKZu
+						3KM0r7DSTOZX83DqNuz5Xw==</ds:Modulus>
+					<ds:Exponent>AQAB</ds:Exponent>
+				</ds:RSAKeyValue>
+			</ds:KeyValue>
+		</ds:KeyInfo>
+		<ds:Object>
+			<xades:QualifyingProperties Target="#SPOCS_TEST">
+				<xades:SignedProperties Id="SPOCS_TEST-xades">
+					<xades:SignedSignatureProperties>
+						<xades:SigningTime>2011-03-15T12:55:47+01:00</xades:SigningTime>
+						<xades:SigningCertificate>
+							<xades:Cert>
+								<xades:CertDigest>
+									<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+									<ds:DigestValue>3jWpP5gJ+YkiSJ+tJxleuDneH92NG6VFxRHlaapLkWo=</ds:DigestValue>
+								</xades:CertDigest>
+								<xades:IssuerSerial>
+									<ds:X509IssuerName>EMAIL=servicedesk@bos-bremen.de,CN=SPOCS TEST CA,OU=SPOCS TSL TEAM,O=SPOCS,ST=EU,C=EU</ds:X509IssuerName>
+									<ds:X509SerialNumber>3</ds:X509SerialNumber>
+								</xades:IssuerSerial>
+							</xades:Cert>
+						</xades:SigningCertificate>
+					</xades:SignedSignatureProperties>
+				</xades:SignedProperties>
+			</xades:QualifyingProperties>
+		</ds:Object>
+	</ds:Signature>
+</tsl:TrustServiceStatusList>
