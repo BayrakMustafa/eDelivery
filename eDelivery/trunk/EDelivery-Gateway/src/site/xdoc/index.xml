@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<document>
+	<properties>
+		<title>Overview</title>
+	</properties>
+	<body>
+		<section name="eDelivery - Overview">
+			<p>
+				The SPOCS eDelivery concept defines an interoperability layer to
+				interconnect secure and trustworthy eDelivery systems
+				established in
+				the EU Member States. The different solutions are connected via
+				Gateways, which are Web Services
+				communicating via a common SOAP
+				profiling as specified by ETSI TS 102 640 SOAP
+				binding profile, part
+				of the ETSI
+				"Registered E-Mail (REM)" specification.
+				<br></br>
+				The picture below shows a snapshot of solutions connected mid 2012;
+				Romania and Sweden signalled plans to join
+				in course of 2012.
+			</p>
+			<p>
+				<div style="text-align: center;">
+					<img src="images/InterconnectNetworkSnapshot.png" width="670"
+						height="370" alt="SPOCS eDelivery Network Snapshot" />
+				</div>
+			</p>
+			<subsection name="eDelivery Gateway">
+				<p>
+					SPOCS provides a generic Gateway where national eDelivery solutions
+					have
+					to be connected to via an adapter to facilitate the mapping of
+					domestic message format and packaging to the one used
+					on the
+					interoperability layer.
+					<br />
+					The Gatways must account for the mapping of organisational,
+					semantical and technical layers in the different eDelivery realms:
+					<br />
+					<br />
+					<div style="text-align: center;">
+						<img src="images/GatewayMappingLayers.png" width="720" height="320"
+							alt="Mapping Layers" />
+					</div>
+					<br />
+					For the technical and semantical layer, a comfortable Java API is
+					provided for converting in- and outbound messages from/to the
+					respective domestic format. On the organisational layer, a base
+					conformance level is defined and provions are given to establish
+					mutual trust.
+				</p>
+			</subsection>
+			<subsection name="Interconnect Protocol">
+				<p>
+
+					For the „SPOCS Interconnect“ interoperability layer, the Web
+					Services protocol stack has been chosen as the base
+					technology set.
+					For serving the particular SPOCS requirements appropriate
+					protocols
+					or protocol extensions have
+					been designed, all based on SOAP,
+					WS-Addressing, WS-Security and
+					underlying mechanisms for message
+					security,
+					SAML token profiled according STORK for authentication,
+					HTTP, SSL/TLS
+					and other proven technologies.
+					<br />
+					A "normalized" message format is defined, enabling the mapping of
+					domestic message structuring/packaging formats
+					to the SPOCS
+					interconnect one and vice versa. First of all, this
+					concept
+					addresses meta information related to
+					the payload. Many automated
+					processes rely on meta data for further
+					processing and distribution
+					outside the core
+					transport infrastructure, thus provisions must be
+					given for interoperable
+					cross-solution mapping of such
+					information.
+					<br />
+					In course of the SPOCS project, the protocol was standardised by
+					ETSI ESI as TS 102 640 "SOAP binding profile" mentioned above.
+				</p>
+			</subsection>
+			<subsection name="Evidences to control message delivery status">
+				<p>
+					According the REM specification, SPOCS eDelivery uses REM
+					Evidences for control, proof or notification of the
+					dispatched
+					message flow. In a nutshell, evidences provide for a valid proof
+					of
+					end-to-end message delivery. Alike the
+					message itself, evidences can
+					be converted from/to the corresponding
+					domestic format for delivery
+					status control information.
+				</p>
+			</subsection>
+			<subsection name="SAML Token used for end entity authenticity attestation">
+				<p>
+					National solutions use different mechanisms and token for
+					attesting
+					authenticity of end entities. For this purpose,
+					SPOCS
+					eDelivery uses SAML-Token as specified by the OASIS "Security
+					Assertion Markup Language" specification, used in a
+					profiling like
+					provided by the STORK LSP. Again, alike for the message
+					itself,
+					SAML token can be converted from/to the
+					corresponding domestic
+					format/mechanisms for authenticity attestation.
+				</p>
+			</subsection>
+			<subsection name="SPOCS Trust List to establish cross-solution trust">
+				<p>
+					National Gateways are seen as part of the national trust domains. A
+					single Gateway in a trustworthy manner
+					somewhat is acting "on behalf" of the eDelivery domains/realms using this
+					specific instance to interconnect to foreign
+					solutions; to establish trust between the solutions interconnected via
+					Gateways, trust must be established between these
+					different Gateways. eDelivery Gateways must be registered in a SPOCS Trust
+					List according to ETSI TS 102 231, among other attributes
+					exposing X509v3 certificates used by the Gateways for SSL handshake and
+					message signing. This transport signature is checked
+					by a receiving Gateway to control if the sending Gateway is a
+					trusted
+					one inside the SPOCS Interconnect trust circle.
+				</p>
+			</subsection>
+			<subsection
+				name="The eDelivery open modules provide following functionalities:">
+				<ul>
+					<li>API to convert messages between domestic format and the one
+						used on the interoperability layer ("REMDispatch") </li>
+					<li>Validation of correct format of messages / message parts</li>
+					<li>Application and Validation of signatures applied to messages /
+						message parts</li>
+					<li>Generation of Evidences, access to such objects and contained
+						elements and attributes</li>
+					<li>Generation of SAML token attesting end entity authenticity,
+						access to such objects and contained elements and attributes</li>
+					<li>Transparent target Gateway discovery on base of recipients's
+						eDelivery domain</li>
+					<li>Trust establishment/validation between Gateways: transparent
+						handshake with SPOCS TL</li>
+				</ul>
+
+			</subsection>
+			<p>
+				The present documentation consist of following sections:
+				<ul>
+					<li>
+						<a href="specification.html">Specification</a>
+						- gives an overview about the eDelivery specification
+					</li>
+					<li>
+						<a href="architecture.html">Architecture</a>
+						- gives an overview about the architecture and interfaces of the
+						eDelivery Gateway
+					</li>
+					<li>
+						<a href="software_prerequisites.html">Software and Periquisites</a>
+						- How to gather and install the software; runtime perequsites
+					</li>
+					<li>
+						<a href="setup.html">Setting up a national adapter</a>
+						- Template and cookbook to get started with a national adapter
+					</li>
+					<li>
+						<a href="tslregistration.html">Registration in SPOCS Trust List</a>
+						- Detail to register and maintain a Gateway entry in the SPOCS TL
+					</li>
+					<li>
+						<a href="testing.html">Support for Testing</a>
+						- gives an overview of tools provided for testing
+					</li>
+					<li>
+						<a href="license.html">License</a>
+						- Information about the eDelivery open modules license
+					</li>
+					<li>
+						<a href="faq.html">FAQ</a>
+						- eDelivery FAQs
+					</li>
+					<li>
+						<a href="roadmap.html">Roadmap</a>
+						- gives an overview about future developments
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+						- contact details
+					</li>
+				</ul>
+			</p>
+		</section>
+
+		<section name="Support">
+		</section>
+	</body>
+</document>
