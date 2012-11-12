@@ -2,7 +2,7 @@
 	<parent>
 		<groupId>eu.spocseu</groupId>
 		<artifactId>spocs-parent</artifactId>
-		<version>1.0.6</version>
+		<version>1.0.7</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.spocseu</groupId>
