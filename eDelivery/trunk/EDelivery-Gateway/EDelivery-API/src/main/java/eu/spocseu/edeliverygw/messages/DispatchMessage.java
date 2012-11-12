@@ -1,26 +1,24 @@
-/* ---------------------------------------------------------------------------
-             COMPETITIVENESS AND INNOVATION FRAMEWORK PROGRAMME
-                   ICT Policy Support Programme (ICT PSP)
-           Preparing the implementation of the Services Directive
-                   ICT PSP call identifier: ICT PSP-2008-2
-             ICT PSP main Theme identifier: CIP-ICT-PSP.2008.1.1
-                           Project acronym: SPOCS
-   Project full title: Simple Procedures Online for Cross-border Services
-                         Grant agreement no.: 238935
-                               www.eu-spocs.eu
-------------------------------------------------------------------------------
-    WP3 Interoperable delivery, eSafe, secure and interoperable exchanges
-                       and acknowledgement of receipt
-------------------------------------------------------------------------------
-        Open module implementing the eSafe document exchange protocol
-------------------------------------------------------------------------------
+/*******************************************************************************
+ * Copyright (c) 2012 EU LSP SPOCS http://www.eu-spocs.eu/.
+ * 
+ * Licensed under the EUPL, Version 1.1 or â€“ as soon they
+ * will be approved by the European Commission - subsequent
+ * versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the
+ * Licence.
+ * You may obtain a copy of the Licence at:
+ *  
+ *  http://ec.europa.eu/idabc/en/document/7774.html
+ *  
+ * Unless required by applicable law or agreed to in
+ * writing, software distributed under the Licence is
+ * distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ * express or implied.
+ * See the Licence for the specific language governing
+ * permissions and limitations under the Licence.
+ ******************************************************************************/
 
-$URL: svn:https://svnext.bos-bremen.de/SPOCS/AllWpImplementation/EDelivery-Gateway
-$Date: 2010-10-14 18:55:57 +0200 (Do, 14. Okt 2010) $
-$Revision: 86 $
-
-See SPOCS_WP3_LICENSE_URL for license information
---------------------------------------------------------------------------- */
 package eu.spocseu.edeliverygw.messages;
 
 import java.io.ByteArrayInputStream;
