@@ -40,9 +40,9 @@
 		</snapshotRepository>
 	</distributionManagement>
 	<scm>
-		<url>https://svnext.bos-bremen.de/SPOCS/AllWpImplementation/EDelivery-Gateway</url>
-		<connection>scm:svn:https://svnext.bos-bremen.de/SPOCS/AllWpImplementation/EDelivery-Gateway</connection>
-		<developerConnection>scm:svn:https://svnext.bos-bremen.de/SPOCS/AllWpImplementation/EDelivery-Gateway</developerConnection>
+		<connection>scm:svn:https://joinup.ec.europa.eu/svn/spocs/eDelivery/trunk/</connection>
+		<developerConnection>scm:svn:https://joinup.ec.europa.eu/svn/spocs/eDelivery/trunk/</developerConnection>
+		<url>https://joinup.ec.europa.eu/svn/spocs/eDelivery/trunk/</url>
 	</scm>
 	<issueManagement>
 		<system>https://dev.spocs.bos-asp.eu/jira/browse/EDEL</system>
