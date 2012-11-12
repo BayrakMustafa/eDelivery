@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<endpoints version="2.0"
-	xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
-	<endpoint implementation="eu.spocseu.edeliverygw.service.SpocsGatewayProvider" binding="http://java.sun.com/xml/ns/jaxws/2003/05/soap/bindings/HTTP/"
-		name="SpocsGateway" url-pattern="/spocs" wsdl="WEB-INF/wsdl/eDeliveryGateway.wsdl"
-		service="{http://spocsinterconnect.gateway.eu}GatewayService" port="{http://spocsinterconnect.gateway.eu}IntergatewayPort" />
-</endpoints>
