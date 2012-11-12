@@ -23,7 +23,11 @@
 	</appender>
 
 
-	<category name="eu">
+	<category name="org.apache">
+		<priority value="error" />
+	</category>
+
+	<category name="eu.spocseu">
 		<priority value="debug" />
 	</category>
 
