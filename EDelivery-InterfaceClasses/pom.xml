@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <packaging>jar</packaging>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>EDelivery</artifactId>
+    <groupId>eu.spocseu</groupId>
+    <version>1.3.0</version>
+  </parent>
+  <groupId>eu.spocseu</groupId>
+  <artifactId>EDelivery-InterfaceClasses</artifactId>
+  <name>EDelivery-InterfaceClasses</name>
+  <version>1.3.0</version>
+  <repositories>
+  </repositories>
+  
+  <dependencies>
+  </dependencies>
+  <properties>
+		<!-- project specific properties -->
+		<dist.dir>${basedir}/dist</dist.dir>
+		<gen.dir>${basedir}/target/gen</gen.dir>
+		<classes.gen.dir>${basedir}/target/classes</classes.gen.dir>
+		<wsdl.dir>${basedir}/../EDelivery-GenericWAR/src/main/webapp/WEB-INF/wsdl</wsdl.dir>
+	</properties>
+
+	<build>
+		<finalName>InterfaceClasses</finalName>
+		<plugins>
+			<plugin>
+				<!-- plugin version 1.12 taken from repository at download.java.net/maven/2
+					as there's only an older version in the central repository -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>1.12</version>
+				<executions>
+					<execution>
+						<id>wsdl</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>wsimport</goal>
+						</goals>
+						<configuration> 
+							<!-- explicit proxy configuration: using <arg> is just a workaround
+								since <httpproxy> has a known bug at parameter passing (workaround only works
+								with plugin version >= 1.12) -->
+							<args>
+								<arg>-httpproxy:10.21.0.6:8080</arg>
+								<arg>-Xdebug</arg>
+							</args>
+							<keep>true</keep>
+							<verbose>true</verbose>
+							<destDir>${classes.gen.dir}</destDir>
+							<sourceDestDir>${gen.dir}</sourceDestDir>
+							<wsdlDirectory>${wsdl.dir}</wsdlDirectory>
+							<wsdlLocation>eDeliveryGateway.wsdl</wsdlLocation>
+							<extension>true</extension>
+							<xnoAddressingDataBinding>true</xnoAddressingDataBinding>
+							<xadditionalHeaders>true</xadditionalHeaders>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>	
+	<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.1</version>
+        <executions>
+          <execution>
+            <id>add-source</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>${gen.dir}</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+		</plugins>
+	</build>
+</project>
