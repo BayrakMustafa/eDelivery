@@ -28,11 +28,10 @@
 			<id>spocs1</id>
 			<url>dav:https://joinup.ec.europa.eu/webdav/spocs/www/eDelivery/</url>
 		</site>
-		<repository>
-			<id>joinup</id>
-			<name>Release Repository</name>
+		<repository> 
+			<id>joinup-releases</id> 
 			<url>https://joinup.ec.europa.eu/nexus/content/repositories/releases/</url>
-		</repository>
+		</repository> 
 	</distributionManagement>
 	<scm>
 		<connection>scm:svn:https://joinup.ec.europa.eu/svn/spocs/eDelivery/trunk/</connection>
