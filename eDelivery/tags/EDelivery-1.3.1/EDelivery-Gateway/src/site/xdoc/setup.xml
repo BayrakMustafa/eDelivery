@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<document>
+	<properties>
+		<title>Setting up an Adapter to National eDelivery Solution</title>
+	</properties>
+	<body>
+		<section name="Setting up your Development Environment">
+			<p>
+				Please read this first:
+				<a href="software_prerequisites.html">Software and Prerequisites</a>
+			</p>
+			<p>The next step is checking out the
+				EDelivery-Gateway/EDelivery-GenericWAR and the
+				EDelivery-Gateway/MDTemplate project from the SVN. To implement a
+				new MD copy the "MDTemplate" project.
+			</p>
+			<p>If you copy the Project on file system level, please erase
+				the ".svn" folders.
+				But we suggest to copy the project in Eclipse (
+				copy and paste) and right-click > Team > Disconnect.
+			</p>
+		</section>
+		
+		
+		<section name="Project Structure">
+				
+			<h3>EDelivery</h3>
+			<p>This is the super project which holds all the EDelivery parts. Also the MD Implementations are included in this Directory, but are '''not''' part of the Maven Multi Module Project!
+			This should ensure that each MD Implementation can be built independent.</p>
+			
+			<h3>EDelivery-API</h3>
+			<p>This part of EDelivery provides the interface for Member State Implementations.</p>
+			
+			<h3>EDelivery-GenericWAR</h3>
+			<p>Here all the Ressources like web.xml or wsdl is located. The implementation of the MD projects needs the resources of this project.</p>
+			
+			<h3>MDTemplate</h3>
+			<p>Copy this template project for to create new member state implementations. For further explanation see below!</p>
+			
+			<h3>TestResources</h3>
+			<p>This project only builds some xml, properties, keystore and certificate files into a jar resource.</p> 
+			
+			<h3>EDelivery-InterfaceClasses</h3>
+			This project contains the generated Interface Classes in the Folder "gen". The pom.xml executes the wsimport maven plugin, also the proxy settings for maven are made here:
+			
+		<source>&lt;configuration&gt;
+  &lt;args&gt;
+    &lt;arg&gt;-httpproxy:10.21.0.6:8080&lt;/arg&gt;
+  &lt;/args&gt;
+&lt;/configuration&gt;</source>
+		</section>
+		
+
+		<section name="Sending Gateway side examples (client side)">
+			<p>The project "MDTemplate" contains some sample implementations. In
+				detail, there are 4 samples for sending out messages and one sample
+				implementing the recipient side of a gateway implementation.
+				To
+				configure the gateway a XML file (spocsConfig.xml) must be placed
+				in
+				the folder conf/spocs of the JBoss context directory as well as
+				some
+				certificates or keystores.
+				A sample of this property file can be
+				found in the project directory
+				src/main/resources.
+			</p>
+			<table>
+				<tr>
+					<th>Java class name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>SendDispatch</td>
+					<td>Shows how to send a Dispatch message to another eDelivery SPOCS
+						gateway.
+					</td>
+				</tr>
+				<tr>
+					<td>SendDeliveryNonDeliveryToRecipient</td>
+					<td>Shows how to send DeliveryNonDeliveryToRecipient evidence as
+						new SPOCS message to another eDelivery SPOCS gateway.
+					</td>
+				</tr>
+				<tr>
+					<td>SendAcceptanceRejectionByRecipient</td>
+					<td>Shows how to send SendAcceptanceRejectionByRecipientevidence as
+						new SPOCS message to another eDelivery SPOCS gateway.
+					</td>
+				</tr>
+				<tr>
+					<td>SendRetrievalNonRetrieval</td>
+					<td>Shows how to send SendRetrievalNonRetrievalevidence as new
+						SPOCS message to another eDelivery SPOCS gateway.
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section name="Receiving Gateway side example (server side)">
+			<p>The "MDTemplate" project provides the sample class SampleImpl. It
+				contains the sample implementation of the recipient gateway
+				interface. Some sample code with inline comments explains how it
+				works. The sample project builds the deployment WAR with the Maven
+				"package" command. After build of the WAR file, it can be copied
+				into the deploy folder of the application server.</p>
+		</section>
+
+
+		<section name="Exception handling">
+		<table>
+		<tr>
+			<th>Exception</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>SpocsSystemInstallationException</td>
+			<td>This exception will be thrown in the case of installation error. For example if the hash algorithm is not supported by the system. In the most cases the JDK or the must be improved or same libraries are missing</td>
+		</tr>
+		<tr>
+			<td>SpocsWrongInputDataException</td>
+			<td>This exception will be thrown in the case of wrong input data. For example if the input data could not be parsed with jaxb. In this case the user has to change the input parameter and try it then again.</td>
+		</tr>
+		<tr>
+			<td>SpocsConfigurationException</td>
+			<td>In the case of errors in the configuration of the client or the server side. </td>
+		</tr>
+		<tr>
+			<td>EvidenceException</td>
+			<td>The EvidenceException will be thrown in the case of evidences with fault codes. Here are concrete implementations available. All of them extends the EvidenceException: NonDeliveryException, NonRetrievalRecipientException, ReceivedByNonREMSystemException, RejectionByRecipientException, RelayREMMDRejectionException, RelayToREMMDFailureException, SubmissionRejectionExcpetion</td>
+		</tr>
+		</table>
+		<p>In every cases the original exception can be get out of the new Spocs exceptions(if possible).</p>
+		</section>
+
+
+		<section name="Configuration">
+		<p>As described above you have to place a configuration file in JBOSS_HOME/server/[your_context]/conf/spocs/spocsConfig.xml
+		You find a Sample for the XML File below, please replace the values in brackets</p>
+		
+		
+	<source>&lt;spocs:SpocsConfiguration xmlns:spocs=&quot;http://uri.eu-spocs.eu/configuration/common&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xsi:schemaLocation=&quot;http://uri.eu-spocs.eu/configuration/common D:\ws_spocs_TSL\SpocsCommon\src\main\resources\spocsCommon.xsd&quot;&gt;
+&lt;spocs:Common resourcesDir=&quot;src/main/resources&quot; MemberstateNation=&quot;PT&quot;&gt;
+	&lt;spocs:Signature type=&quot;PKCS12&quot; pin=&quot;6353 &quot;&gt;[cert.pfx/.p12]&lt;/spocs:Signature&gt;
+&lt;/spocs:Common&gt;
+&lt;spocs:TSL&gt;
+	&lt;tsl:TSLDetails xmlns:tsl=&quot;http://uri.eu-spocs.eu/configuration/tsl&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+		xsi:schemaLocation=&quot;http://uri.eu-spocs.eu/configuration/tslTSLDetails.xsd&quot; 
+		certificateRepository=&quot;/&quot; followTSLPointer=&quot;false&quot;  forceCacheUpdate=&quot;false&quot; 
+		schemeCertificateVerificationType=&quot;0&quot; schemeSignatureVerification=&quot;0&quot; serviceCertificateVerificationType=&quot;0&quot; 
+		TCPConnectionTimeout=&quot;5&quot; useCRLCache=&quot;false&quot; comment=&quot;Only for testing&quot; &gt;
+		&lt;tsl:TSLSourceList&gt;
+			&lt;tsl:TSLSource&gt;[D:\SPOCS_TSL_00005sig.xml]&lt;/tsl:TSLSource&gt;
+		&lt;/tsl:TSLSourceList&gt;
+	&lt;/tsl:TSLDetails&gt;
+&lt;/spocs:TSL&gt;
+&lt;spocs:Routing /&gt;
+&lt;spocs:eDelivery&gt;
+	&lt;eDel:EDeliveryDetail xmlns:eDel=&quot;http://uri.eu-spocs.eu/configuration/eDelivery&quot;
+		xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+		xsi:schemaLocation=&quot;http://uri.eu-spocs.eu/configuration/eDelivery D:\ws_spocs\EDelivery\EDelivery-API\src\main\resources\eDeliveryDetails.xsd&quot;&gt;
+		&lt;eDel:Server gatewayName=&quot;[MD_Portugal]&quot; gatewayAddress=&quot;[https://192.168.17.136:8443/MDTemplate/]&quot;
+			synchronGW=&quot;false&quot; gwImplClass=&quot;[eu.spocseu.gw.template.SampleImpl]&quot; /&gt;
+		&lt;!-- the attribute gwImplClass is very important! This is your server side implementation... --&gt;
+	&lt;/eDel:EDeliveryDetail&gt;
+&lt;/spocs:eDelivery&gt;
+&lt;spocs:Extention /&gt;
+&lt;/spocs:SpocsConfiguration&gt;</source>
+		</section>
+
+	</body>
+</document>
