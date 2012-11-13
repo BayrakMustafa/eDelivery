@@ -11,7 +11,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>EDelivery</artifactId>
 	<name>EDelivery</name>
-	<version>1.3.1</version>
+	<version>1.3.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<licenses>
@@ -33,9 +33,9 @@
 		</repository> 
 	</distributionManagement>
 	<scm>
-		<connection>scm:svn:https://joinup.ec.europa.eu/svn/spocs/eDelivery/tags/EDelivery-1.3.1</connection>
-		<developerConnection>scm:svn:https://joinup.ec.europa.eu/svn/spocs/eDelivery/tags/EDelivery-1.3.1</developerConnection>
-		<url>https://joinup.ec.europa.eu/svn/spocs/eDelivery/tags/EDelivery-1.3.1</url>
+		<connection>scm:svn:https://joinup.ec.europa.eu/svn/spocs/eDelivery/trunk/</connection>
+		<developerConnection>scm:svn:https://joinup.ec.europa.eu/svn/spocs/eDelivery/trunk/</developerConnection>
+		<url>https://joinup.ec.europa.eu/svn/spocs/eDelivery/trunk/</url>
 	</scm>
 	<issueManagement>
 		<system>https://dev.spocs.bos-asp.eu/jira/browse/EDEL</system>
