@@ -31,7 +31,7 @@
 		<repository>
 			<id>joinup</id>
 			<name>Release Repository</name>
-			<url>dav:https://joinup.ec.europa.eu/nexus/content/repositories/releases/</url>
+			<url>https://joinup.ec.europa.eu/nexus/content/repositories/releases/</url>
 		</repository>
 	</distributionManagement>
 	<scm>
