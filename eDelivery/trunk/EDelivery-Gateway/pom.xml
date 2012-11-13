@@ -29,15 +29,10 @@
 			<url>dav:https://joinup.ec.europa.eu/webdav/spocs/www/eDelivery/</url>
 		</site>
 		<repository>
-			<id>spocs-repo</id>
+			<id>joinup</id>
 			<name>Release Repository</name>
-			<url>dav:http://dev.spocs.bos-asp.eu/nexus/content/repositories/spocs</url>
+			<url>dav:https://joinup.ec.europa.eu/nexus/content/repositories/releases/</url>
 		</repository>
-		<snapshotRepository>
-			<id>spocs-repo</id>
-			<name>Snapshot Repository</name>
-			<url>dav:http://dev.spocs.bos-asp.eu/nexus/content/repositories/spocs_snapshot</url>
-		</snapshotRepository>
 	</distributionManagement>
 	<scm>
 		<connection>scm:svn:https://joinup.ec.europa.eu/svn/spocs/eDelivery/trunk/</connection>
