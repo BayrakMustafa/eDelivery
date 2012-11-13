@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>eu.spocseu</groupId>
 			<artifactId>SpocsCommon</artifactId>
-			<version>1.3.1-SNAPSHOT</version>
+			<version>1.3.1</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.spocseu</groupId>
