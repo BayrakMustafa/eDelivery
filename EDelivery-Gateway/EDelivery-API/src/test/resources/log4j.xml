@@ -10,15 +10,14 @@
 		</layout>
 	</appender>
 
-   	<appender name="ProtocolLogger" class="org.apache.log4j.DailyRollingFileAppender"> <!-- class="org.jboss.logging.appender.DailyRollingFileAppender"-->
+   	<!-- appender name="ProtocolLogger" class="org.apache.log4j.DailyRollingFileAppender">
 		<param name="File" value="SpocsMessage.log" />
 		<param name="Append" value="true" />
-		<!-- Rollover at midnight each day -->
 		<param name="DatePattern" value="'.'yyyy-MM-dd" />
 		<layout class="org.apache.log4j.PatternLayout">
 			         <param name="ConversionPattern" value="%d %-5p [%c] (%t) %m%n"/>
 		</layout>
-	</appender>
+	</appender-->
 
 	<category name="eu">
 		<priority value="debug" />
