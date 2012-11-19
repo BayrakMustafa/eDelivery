@@ -158,13 +158,8 @@
 				The present documentation consist of following sections:
 				<ul>
 					<li>
-						<a href="specification.html">Specification</a>
-						- gives an overview about the eDelivery specification
-					</li>
-					<li>
-						<a href="architecture.html">Architecture</a>
-						- gives an overview about the architecture and interfaces of the
-						eDelivery Gateway
+						<a href="specification.html">Architecture, Specification Intro</a>
+						- gives an overview about the eDelivery architecture and specification
 					</li>
 					<li>
 						<a href="software_prerequisites.html">Software and Periquisites</a>

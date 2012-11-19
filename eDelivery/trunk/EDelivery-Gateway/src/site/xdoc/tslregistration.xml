@@ -1,9 +1,24 @@
 <?xml version="1.0"?>
 <document>
 	<properties>
-		<title>Architecture</title>
+		<title>SPOCS TL for eDelievry</title>
 	</properties>
 	<body>
-	
+		<section name="SPOCS Trust List">
+				<p>
+The SPOCS Trusted List is the central component of the SPOCS infrastructure and distributed services.
+It provides the trust relation of the service nodes and enables addressing for the SPOCS building blocks
+eDelivery, eServices and eSafe. The TL is a signed XML info set as specified by <a href="http://www.etsi.org/deliver/etsi_ts/102200_102299/102231/03.01.02_60/ts_102231v030102p.pdf">ETSI TS 102 231</a> 
+and profiled in <a href="SpecDocuments/SPOCS_D3.2_Appendix2_TSL_Specification_D3.3Rev.pdf" type="application/pdf">
+SPOCS deliverable D3.2 Appendix 2: Trust-Service status List profiling</a><br/><br/>
+To offer or invoke a SPOCS service, a provider needs an entry in this trusted list. The access is open and 
+free of charge in general, but bound to policy adherence and mutual services provision of the 
+participants.<br/><br/>
+The following document provides the SPOCS TL policies, the issuer and the participant are obligated to:
+<a href="SpecDocuments/SPOCS_D3.2_Appendix5_SPOCS-TSL_accredidation_and_operation_policy.pdf" type="application/pdf">SPOCS deliverable D3.2 Appendix 5: SPOCS TSL Accreditation and Operation Policy</a>
+To get an entry in the SPCOS TL, please move to the section <a href="http://joinup.ec.europa.eu/site/spocs/SpocsTL/">SPOCS TL</a> and
+ follow the instructions on “TL registration”. 
+</p>
+	</section>
 	</body>
 </document>

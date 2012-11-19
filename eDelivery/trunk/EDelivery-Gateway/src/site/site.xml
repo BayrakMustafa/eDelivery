@@ -22,9 +22,8 @@
 
 		<!-- <menu ref="parent" /> -->
 		<menu name="eDelivery">
-			<item name="Overview" href="/index.html" />
-			<item name="Specification" href="/specification.html" />
-			<item name="Architecture" href="/architecture.html" />
+			<item name="General Overview" href="/index.html" />
+			<item name="Architecture, Specification Intro" href="/specification.html" />
 			<item name="Software and Prerequisites" href="/software_prerequisites.html" />
 			<item name="Setting up a national Adapter" href="/setup.html" />
 			<item name="Registration in Trust List" href="tslregistration.html" />
