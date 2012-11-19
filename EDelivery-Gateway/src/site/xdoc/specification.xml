@@ -118,7 +118,7 @@
 					<br />
 					The detailed schema is specified in
 					<a
-						href="SpecDocuments/D3 2_Appendix3_eDelivery_Interconnect_Protocol_V2.0.pdf"
+						href="SpecDocuments/SPOCS_D3.2_Appendix3_eDelivery_Interconnect_Protocol_V2.0.pdf"
 						type="application/pdf">
 						<u>SPOCS Interconnect Protocol specification</u>
 					</a>
@@ -151,7 +151,7 @@
 								<li>Destinations: eAddress and optional details for recipients
 									(in role "To" and "cc") </li>
 								<li>MsgIdentification: Message-Id as assigned by source MD,
-									optional referenced ones ("in rely to", other references)) </li>
+									optional referenced ones ("in reply to", other references)) </li>
 							</ul>
 						</ul>
 						<dt>ds:Signature</dt>
@@ -252,7 +252,7 @@
 					For profiling of this specification according to the SPOCS
 					requirements see section 2 of
 					<a
-						href="SpecDocuments/D3 2_Appendix3_eDelivery_Interconnect_Protocol_V2.0.pdf"
+						href="SpecDocuments/SPOCS_D3.2_Appendix3_eDelivery_Interconnect_Protocol_V2.0.pdf"
 						type="application/pdf">
 						<u>SPOCS Interconnect Protocol specification</u>
 					</a>
@@ -432,7 +432,7 @@
 					Details and an example for these SAML Sender Vouches Token is given
 					in
 					<a
-						href="SpecDocuments/D3 2_Appendix3_eDelivery_Interconnect_Protocol_V2.0.pdf"
+						href="SpecDocuments/SPOCS_D3.2_Appendix3_eDelivery_Interconnect_Protocol_V2.0.pdf"
 						type="application/pdf">
 						<u>section 4 of the SPOCS Interconnect Protocol specification</u>
 					</a>
