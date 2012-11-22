@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <document>
 	<properties>
-		<title>Overview</title>
+		<title>MDTemplate</title>
 	</properties>
 	<body>
+		<section name="About MDTemplate">
+			<p>This is a template, intended to be used as "cookbook" to implement an adapter
+			to a national eDelivery solution. 
+			</p>
+		</section>
 	</body>
 </document>

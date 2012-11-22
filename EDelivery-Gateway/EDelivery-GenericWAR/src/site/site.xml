@@ -7,7 +7,7 @@
     <skin>
         <groupId>eu.spocseu</groupId>
         <artifactId>maven-spocs-skin</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.6</version>
     </skin>
 	
 	 <bannerRight>
