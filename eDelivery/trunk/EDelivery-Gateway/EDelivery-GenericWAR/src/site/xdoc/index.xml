@@ -1,8 +1,14 @@
 <?xml version="1.0"?>
 <document>
 	<properties>
-		<title>Overview</title>
+		<title>eDeliveryGenericWar</title>
 	</properties>
 	<body>
+	<section name="About eDeliveryGenericWAR">
+			<p>This is the Web application ARchive containing the generic part of the eDelivery Gateway.
+			Ressources like web.xml or wsdl are located here. The implementation of a national adapter project
+			needs the resources of this project. 
+					</p>
+			</section>
 	</body>
 </document>

@@ -2,7 +2,7 @@
 <faqs xmlns="http://maven.apache.org/FML/1.0.1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/FML/1.0.1 http://maven.apache.org/xsd/fml-1.0.1.xsd"
-  title="Building Block eDocuments and Signature - Frequently Asked Questions"
+  title="Building Block eDelivery - Frequently Asked Questions"
   toplink="false">
 
   <part id="general">
@@ -13,22 +13,57 @@
         What means eDelivery?
       </question>
       <answer>
-        <p></p>
+        <p>The eDelivery building block enables different national secure and reliable electronic 
+        message systems to exchange messages among each other.</p>
       </answer>
       </faq>
+     <faq id="general-02">   
+      <question>
+        What are the (potential) benefits of using it for business?
+    	</question>
+    	<answer>
+        	<ul>
+						<li>Seamless electronic communication cross border</li>
+						<li>Added functionality to a connected eDelivery solution / system</li>
+						<li>Opening of the international market for connected solutions</li>
+			</ul>
+   		</answer>
+  		</faq>
+  	    <faq id="general-03">   
+      <question>
+        What are the (potential) benefits of using it for consumers?
+    	</question>
+    	<answer>
+        Consumers can use their own system, 
+        they are familiar with, to exchange messages with other systems
+   		</answer>
+  		</faq>
+   	    <faq id="general-04">   
+      <question>
+        What are the (potential) benefits of using it for administration?
+    	</question>
+    	<answer>
+        Enhancement of eGovernment service provision
+   		</answer>
+  		</faq>
   </part>
 
-  <part id="specification">
+  <part id="Technical Architecture">
 
-    <title>Specification</title>
+    <title>Architecture</title>
 
-    <faq id="specification-01">
+    <faq id="architecture-01">
       <question>
-        What is OCD?
+        How do I find out how to use this? 
       </question>
       <answer>
-        <p>OCD is a multi-layered interoperability framework for the exchange of electronic documents on a cross-border level. An OCD represents an electronic document container supporting any kind of electronic data as payload, semantic interoperability and authenticity.</p>
-      </answer>
+        <p>Detailed information is provided in 
+        the eDelivery related sections in
+				<a 	href="SpecDocuments/SPOCS_D3.3_V2.0.pdf"
+						type="application/pdf"> <b>Technical Overview of WP3 Interoperability Framework</b>.
+				</a><br/>
+        An overview is available here - via the SPOCS Starter Kit.</p>
+       </answer>
       </faq>
 	</part>
 </faqs>

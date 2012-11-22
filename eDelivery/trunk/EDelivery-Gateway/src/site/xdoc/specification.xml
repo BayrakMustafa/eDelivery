@@ -442,6 +442,27 @@
 			<a name="SPOCSTL" id="SPOCSTL"></a>
 			<subsection name="Establishing cross-domain Trust: SPOCS Trust List">
 				<p>
+				Establishment of end-to-end trust is a critical factor in an eDelivery process,
+				as well as trust between service nodes involved in the overall process. <br/>
+				The trust architecture established by SPOCS is based on the hypothesis that trust within
+				each eDelivery realm (context of one eDelivery solution) is established by specific policies
+				in the realm itself, the SPOCS solution adds a Gateway-to-Gateway trust. <br/><br/>
+				Generally explained, Gateways are entry and exit points of one system which allow or control
+				access to other systems. In this scenario Gateways, besides being included in real specific 
+				trust circles, must also be part of the Gateway trust circle, which is technically
+				realized by the SPOCS "Trust List".<br/><br/>
+				The SPOCS TL is an instantiation of the "Trust-service Status List" (TSL) as specified
+				by <a href="http://www.etsi.org/deliver/etsi_ts/102200_102299/102231/03.01.02_60/ts_102231v030102p.pdf">
+				ETSI TS 102 231 v3.1.2</a>.<br/> 
+				This TL lists the interconnected eDelivery Gateways specifying both their current status and, optionally,
+				their status history. Any Gateway belonging to a different realm will access the TL and 
+				verify its authenticity as provided for by the SPOCS policies. In this TL, the signing
+				public key of each Gateway, or preferably its corresponding certificates, are published
+				so that any relying party will be able to use it to verify the signature of each
+				eDelivery message, as well as parts of it like Evidence and SAML Sender Vouches Token 
+				issued by a Gateway.<br/>
+				For details, see <a href="http://joinup.ec.europa.eu/site/spocs/SpocsTL/">the SPOCS TL building block</a>. 
+			
 				</p>
 			</subsection>
 		</section>
