@@ -1,9 +1,14 @@
 <?xml version="1.0"?>
 <document>
-	<properties>
-		<title>License</title>
-	</properties>
-	<body>
-	
-	</body>
+  <properties>
+    <title>eDelivery Building Block - License</title>
+  </properties>
+  <body>
+    <section name="License">
+<p>The eDelivery Building Block is open source software and published under the European Union Public License (EUPL) version 1.1. 
+<br/>
+You can download the license <a href="references/EUPL_v.1.1-Licence.pdf" target="_blank">here</a>. Further 
+about the license are available under <a href="http://joinup.ec.europa.eu/software/page/eupl" target="_blank">http://joinup.ec.europa.eu/software/page/eupl</a>.</p>
+    </section>  
+   </body>
 </document>

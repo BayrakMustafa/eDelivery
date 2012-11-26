@@ -4,6 +4,32 @@
 		<title>roadmap</title>
 	</properties>
 	<body>
+	<section name="Roadmap">
+	<p>
+	The different eDelivery concepts of the Large Scale Pilot Projects currently are subject to convergence activities; 
+	consolidation and alignment of the different approaches will be one major task of the e-SENS LSP planned to
+	be launched beginning of 2013.<br/> <br/>
+	For SPOCS eDelivery, following enhancements where already discussed during project lifetime:<br></br>
+				<ul>
+					<li>Placement of Gateway meta-data (actually carried in SPOCS TL extension)in a 
+					separate file metadata.xml. Presumably a converged solution will adopt the PEPPOL concept 
+					"Service Metadata Publisher" (SMP)"Service Metadata Locator" (SML) for this functionality. 
+					The future converged solution should be transparent for adapters to national solutions.</li>
+					<li>Validiation of authentication level as required by targeted eDelivery system 
+					against the one provided by the Sender of a message.</li>
+					<li>Isolation of Evidence generation and Evidence validation in separate trusted function modules
+					or even service nodes, to be activatable from any eDelivery infrastructure component via a
+					standardized interface</li>
+					<li>Same for SAML Sender Vouches Token</li>
+					<li>Enhanced generalized stylesheets for visualization of Evidences and SAMl Tokens, to be used by
+					national solutions for convenience.
+					</li>
+	
+				</ul>
+	Each of this function blocks needs a detailed concept and should fit in the more generalized architecture as 
+	envisaged by e-SENS. Thus, the realization was postponed from the SPOCS to the e-SENS LSP.
+	</p>
+	</section>
 	
 	</body>
 </document>
