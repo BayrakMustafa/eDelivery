@@ -14,7 +14,9 @@
 		a Gateway to a foreign solution covering the domain "@SPOCS-EDELIVERYTEST.EU".<br/>
 		To test the implementations of the domestic Gateway, this generic SPOCS eDelivery GW implementation
 		is able to provide some error codes and evidence messages in response to a Dispatch, somewhat in a
-		"ping" manner. Depending on the callers 
+		"ping" manner. The test Gateway will formally check the Dispatch you hand over for correctness and
+		completeness; your impelmentation is can be checked of correct processing of the answers provided in return.<br/>
+		Depending on the callers 
 		settings in the Dispatch element <source>REMDispatch/NormalizedMsg/Informational/Keywords</source>
 		<br/>
 		<table>
@@ -55,8 +57,12 @@
 				<td>Returns a RetrievalNonRetrievalByRecipient(Retrieval) with a new REMMDMessage some seconds later</td>
 			</tr>
 			<tr>
-				<td>AcceptanceRejectionByRecipientMessage</td>
+				<td>AcceptanceByRecipientMessage</td>
 				<td>Returns an AcceptanceRejectionByRecipientMessage(Acceptance) with a new REMMDMessage some seconds later</td>
+			</tr>
+			<tr>
+				<td>RejectionByRecipientMessage</td>
+				<td>Returns an AcceptanceRejectionByRecipientMessage(Rejection) with a new REMMDMessage some seconds later</td>
 			</tr>
 			<tr>
 				<td>ReturnDispatch (to simulate initial REMDispatch entry at domestic Gateway)</td>
@@ -68,9 +74,10 @@
 	<a href="https://joinup.ec.europa.eu/svn/spocs/eDelivery/tags/EDelivery-1.3.1/EDelivery-Gateway/MDTemplate/src/main/resources/spocsConfig.xml">
 	here</a> for the example MDTemplate configuration file. The whole MDTemplate project
 	has to be build as WAR file and to be installed on your Web Application Server.<br/>
-	Below folllows a code example for the simulation. The configuration file setting 
+	Below follows a code example for the simulation. The configuration file setting 
 	<source>gwImplClass="eu.spocseu.gw.template.SampleImpl"</source> in this case must be set to
 	<source>gwImplClass="eu.spocseu.edeliverygw.process.DefaultImpl".</source><br/>
+	The following coded local parts of Recipient and Sender addresses are just examples, they can be chosen free.
 	<source>
 	static String RECIPIENT = "rl@SPOCS-EDELIVERYTEST.EU";
        static String SENDER = "wo@SPOCS-EDELIVERYTEST.EU";
