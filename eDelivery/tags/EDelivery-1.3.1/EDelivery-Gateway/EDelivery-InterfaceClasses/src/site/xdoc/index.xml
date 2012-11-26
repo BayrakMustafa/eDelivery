@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <document>
 	<properties>
-		<title>Overview</title>
+		<title>eDelivery Interface classes</title>
 	</properties>
 	<body>
+	<section name="About eDelivery Interface classes">
+			<p>This part of eDelivery contains the generated Interface Classes in the folder "gen".
+			</p>
+			</section>
 	</body>
+
 </document>

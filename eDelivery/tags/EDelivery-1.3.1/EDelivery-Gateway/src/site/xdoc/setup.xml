@@ -9,12 +9,20 @@
 				Please read this first:
 				<a href="software_prerequisites.html">Software and Prerequisites</a>
 			</p>
+			<p>
+				The description following below just gives a brief overview.
+				For a complete description of the software provided and details 
+				of its usage see the eDelivery related sections in
+				<a 		href="SpecDocuments/SPOCS_D3.3_V2.0.pdf"
+						type="application/pdf"> <b>Technical Overview of WP3 Interoperability Framework</b>.
+				</a>
+			</p>
 			<p>The next step is checking out the
 				EDelivery-Gateway/EDelivery-GenericWAR and the
 				EDelivery-Gateway/MDTemplate project from the SVN. To implement a
-				new MD copy the "MDTemplate" project.
+				new adapter to your national eDelivery Management Domain (MD) just copy the "MDTemplate" project.
 			</p>
-			<p>If you copy the Project on file system level, please erase
+			<p>If you copy the project on file system level, please erase
 				the ".svn" folders.
 				But we suggest to copy the project in Eclipse (
 				copy and paste) and right-click > Team > Disconnect.
@@ -26,13 +34,13 @@
 				
 			<h3>EDelivery</h3>
 			<p>This is the super project which holds all the EDelivery parts. Also the MD Implementations are included in this Directory, but are '''not''' part of the Maven Multi Module Project!
-			This should ensure that each MD Implementation can be built independent.</p>
+			This should ensure that each MD implementation can be built independent.</p>
 			
 			<h3>EDelivery-API</h3>
-			<p>This part of EDelivery provides the interface for Member State Implementations.</p>
+			<p>This part of EDelivery provides the interface for Member State implementations.</p>
 			
 			<h3>EDelivery-GenericWAR</h3>
-			<p>Here all the Ressources like web.xml or wsdl is located. The implementation of the MD projects needs the resources of this project.</p>
+			<p>Holds all the ressources like web.xml or wsdl is located. The implementation of the MD projects needs the resources of this project.</p>
 			
 			<h3>MDTemplate</h3>
 			<p>Copy this template project for to create new member state implementations. For further explanation see below!</p>
@@ -41,7 +49,7 @@
 			<p>This project only builds some xml, properties, keystore and certificate files into a jar resource.</p> 
 			
 			<h3>EDelivery-InterfaceClasses</h3>
-			This project contains the generated Interface Classes in the Folder "gen". The pom.xml executes the wsimport maven plugin, also the proxy settings for maven are made here:
+			This project contains the generated Interface Classes in the folder "gen". The pom.xml executes the wsimport maven plugin, also the proxy settings for maven are made here:
 			
 		<source>&lt;configuration&gt;
   &lt;args&gt;
@@ -54,9 +62,9 @@
 		<section name="Sending Gateway side examples (client side)">
 			<p>The project "MDTemplate" contains some sample implementations. In
 				detail, there are 4 samples for sending out messages and one sample
-				implementing the recipient side of a gateway implementation.
+				implementing the recipient side of a Gateway implementation.
 				To
-				configure the gateway a XML file (spocsConfig.xml) must be placed
+				configure the Gateway a XML file (spocsConfig.xml) must be placed
 				in
 				the folder conf/spocs of the JBoss context directory as well as
 				some
@@ -73,32 +81,32 @@
 				<tr>
 					<td>SendDispatch</td>
 					<td>Shows how to send a Dispatch message to another eDelivery SPOCS
-						gateway.
+						Gateway.
 					</td>
 				</tr>
 				<tr>
 					<td>SendDeliveryNonDeliveryToRecipient</td>
 					<td>Shows how to send DeliveryNonDeliveryToRecipient evidence as
-						new SPOCS message to another eDelivery SPOCS gateway.
+						new SPOCS message to another eDelivery SPOCS Gateway.
 					</td>
 				</tr>
 				<tr>
 					<td>SendAcceptanceRejectionByRecipient</td>
 					<td>Shows how to send SendAcceptanceRejectionByRecipientevidence as
-						new SPOCS message to another eDelivery SPOCS gateway.
+						new SPOCS message to another eDelivery SPOCS Gateway.
 					</td>
 				</tr>
 				<tr>
 					<td>SendRetrievalNonRetrieval</td>
 					<td>Shows how to send SendRetrievalNonRetrievalevidence as new
-						SPOCS message to another eDelivery SPOCS gateway.
+						SPOCS message to another eDelivery SPOCS Gateway.
 					</td>
 				</tr>
 			</table>
 		</section>
 		<section name="Receiving Gateway side example (server side)">
 			<p>The "MDTemplate" project provides the sample class SampleImpl. It
-				contains the sample implementation of the recipient gateway
+				contains the sample implementation of the recipient Gateway
 				interface. Some sample code with inline comments explains how it
 				works. The sample project builds the deployment WAR with the Maven
 				"package" command. After build of the WAR file, it can be copied
@@ -160,7 +168,7 @@ xsi:schemaLocation=&quot;http://uri.eu-spocs.eu/configuration/common D:\ws_spocs
 	&lt;eDel:EDeliveryDetail xmlns:eDel=&quot;http://uri.eu-spocs.eu/configuration/eDelivery&quot;
 		xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
 		xsi:schemaLocation=&quot;http://uri.eu-spocs.eu/configuration/eDelivery D:\ws_spocs\EDelivery\EDelivery-API\src\main\resources\eDeliveryDetails.xsd&quot;&gt;
-		&lt;eDel:Server gatewayName=&quot;[MD_Portugal]&quot; gatewayAddress=&quot;[https://192.168.17.136:8443/MDTemplate/]&quot;
+		&lt;eDel:Server GatewayName=&quot;[MD_Portugal]&quot; GatewayAddress=&quot;[https://192.168.17.136:8443/MDTemplate/]&quot;
 			synchronGW=&quot;false&quot; gwImplClass=&quot;[eu.spocseu.gw.template.SampleImpl]&quot; /&gt;
 		&lt;!-- the attribute gwImplClass is very important! This is your server side implementation... --&gt;
 	&lt;/eDel:EDeliveryDetail&gt;

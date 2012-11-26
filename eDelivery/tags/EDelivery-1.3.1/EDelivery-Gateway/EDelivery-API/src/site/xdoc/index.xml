@@ -1,8 +1,12 @@
 <?xml version="1.0"?>
 <document>
 	<properties>
-		<title>Overview</title>
+		<title>About eDelivery API</title>
 	</properties>
 	<body>
+	<section name="About eDelivery API">
+			<p>This part of eDelivery provides the interface for the adapters to Member State solutions.
+			</p>
+			</section>
 	</body>
 </document>

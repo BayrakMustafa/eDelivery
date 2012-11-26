@@ -1,10 +1,18 @@
 <?xml version="1.0"?>
 <document>
 	<properties>
-		<title>Contact</title>
+		<title>eDelivery Building Block - Contact</title>
 	</properties>
-	<body>
+ <body>
+ 	<section name="Contact">
+ 		<p>The SPOCS eDelivery concept as well as the implementation was foremost lead and provided 
+		by <a href="www.bos-bremen.de">bremen online services GmbH &amp; KG (bos)</a>,  Bremen, Germany. 
+		</p>    
+		<p>The responsible contacts from bos are J&#246;rg Apitzsch [solution design, architecture and 
+		specification details, technical questions]
+	    (<a href="mailto:ja@bos-bremen.de">ja@bos-bremen.de</a>) and Lars Th&#246;lken 
+	    [organisational, solution design, general questions] (<a href="mailto:lt@bos-bremen.de">lt@bos-bremen.de</a>).</p>
 	
+	</section>
 	</body>
 </document>
-
